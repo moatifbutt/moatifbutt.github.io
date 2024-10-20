@@ -1,13 +1,13 @@
 # main links
 main:
   - title: "Home"
-    url: #
+    url: /#
   # - title: "News"
   #   url: /about/
   - title: "Publications"
-    url: #selected-publications
+    url: /#selected-publications
   - title: "Datasets"
-    url: #news
+    url: /#news
   - title: "Contact"
     url: #
   # - title: "Sample Posts"
