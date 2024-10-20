@@ -5,7 +5,7 @@ author_profile: true
 
 I am a Computer Science PhD candidate at [Computer Vision Center, Universitat Autonoma De Barcelona](https://www.cvc.uab.es/) under the supervision of [Dr. Joost Van De Weijer](https://es.linkedin.com/in/joost-van-de-weijer-88084b57). I am working in the [Learning and Perception (LAMP) Team](http://lamp.cvc.uab.es/) where my main research topic is Generative modeling, with the particular focus on personalizing generative models.
 
-Previously, I worked as Research Assistant to [Dr. Junaid Qadir](https://scholar.google.com/citations?user=EdPPQToAAAAJ&hl=en) at [Information Technology University, Pakistan](https://itu.edu.pk/), where I explored Adversarial Machine Learning and Scene Understanding in Autonomous Driving.
+Previously, I worked as Research Assistant to [Dr. Junaid Qadir](https://scholar.google.com/citations?user=EdPPQToAAAAJ&hl=en) at [Information Technology University](https://itu.edu.pk/), where I explored Adversarial Machine Learning and Scene Understanding in Autonomous Driving.
 
 
 ## Recent Updates!
