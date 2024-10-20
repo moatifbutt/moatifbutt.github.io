@@ -1,15 +1,15 @@
 # main links
 main:
   - title: "Home"
-    url: /#
+    url: index/
   # - title: "News"
   #   url: /about/
   - title: "Publications"
-    url: /#selected-publications
+    url: /index/#selected-publications
   - title: "Datasets"
-    url: /#recent-updates
+    url: /index/#news
   - title: "Contact"
-    url: #
+    url: /contact/
   # - title: "Sample Posts"
   #   url: /year-archive/
   # - title: "Sample Collections"
