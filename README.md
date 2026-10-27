@@ -1,101 +1,112 @@
-# Academic Pages
-**Academic Pages is a GitHub Pages template for personal and professional portfolio-oriented websites.**
+# moatifbutt.github.io
 
-![Academic Pages template example](images/themes/homepage-light.png "Academic Pages template example")
+Personal academic website of Muhammad Atif Butt, built with [Jekyll](https://jekyllrb.com/) and the
+[al-folio](https://github.com/alshedivat/al-folio) v1.2 starter. Layouts and theme styles come from
+the `al_folio_*` gems (see `Gemfile`), so this repository only holds content, configuration, and a
+small layer of custom styles and demos.
 
-# Getting Started
-
-1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
-1. Click the "Use this template" button in the top right.
-1. On the "New repository" page, enter your public repository name as "[your GitHub username].github.io", which will also be your website's URL.
-1. Edit site-wide configuration in `_config.yml` and double check that the `url` is the one that you just selected in the previous step and that `repository` reflects the correct path for your repository.
-1. Add your site content, upload any files (like PDFs, .zip files, etc.) to the `files/` directory. They will appear at https://[your GitHub username].github.io/files/example.pdf.
-1. Check status by going to the repository settings, in the "GitHub pages" section
-1. (Optional) Use the Jupyter notebooks or python scripts in the `markdown_generator` folder to generate markdown files for publications and talks from a TSV file.
-
-See more info at https://academicpages.github.io/
-
-### Additional Tutorials
-
-Additional tutorials for working with the Academic Pages template can be found at the following sites:
-- https://jayrobwilliams.com/posts/2020/06/academic-website/
-
-## Running locally
-
-When you are initially working on your website, it is very useful to be able to preview the changes locally before pushing them to GitHub. To work locally you will need to:
-
-1. Clone the repository and made updates as detailed above.
-
-### Using a different IDE
-1. Make sure you have ruby-dev, bundler, and nodejs installed
-    
-    On most Linux distributions and [Windows Subsystem Linux](https://learn.microsoft.com/en-us/windows/wsl/about) the command is:
-    ```bash
-    sudo apt install ruby-dev ruby-bundler nodejs
-    ```
-    If you see error `Unable to locate package ruby-bundler`, `Unable to locate package nodejs `, run the following:
-    ```bash
-    sudo apt update && sudo apt upgrade -y
-    ```
-    then try running `sudo apt install ruby-dev ruby-bundler nodejs` again.
-
-    On MacOS the commands are:
-    ```bash
-    brew install ruby
-    brew install node
-    gem install bundler
-    ```
-1. Run `bundle install` to install ruby dependencies. If you get errors, delete Gemfile.lock and try again.
-
-    If you see file permission error like `Fetching bundler-2.6.3.gem ERROR:  While executing gem (Gem::FilePermissionError) You don't have write permissions for the /var/lib/gems/3.2.0 directory.` or `Bundler::PermissionError: There was an error while trying to write to /usr/local/bin.`
-    Install Gems Locally (Recommended):
-    ```bash
-    bundle config set --local path 'vendor/bundle'
-    ```
-    then try run `bundle install` again. If succeeded, you should see a folder called `vendor` and `.bundle`.
-
-1. Run `jekyll serve -l -H localhost` to generate the HTML and serve it from `localhost:4000` the local server will automatically rebuild and refresh the pages on change to Markdown (*.md) and HTML files, while changes to the core template and configuration (i.e., `_config.yml`) will require stopping and restarting Jekyll.
-    You may also try `bundle exec jekyll serve -l -H localhost` to ensure jekyll to use specific dependencies on your own local machine.
-
-If you are running on Linux it may be necessary to install some additional dependencies prior to being able to run locally: `sudo apt install build-essential gcc make`
-
-## Using Docker
-
-Working from a different OS, or just want to avoid installing dependencies? You can use the provided `Dockerfile` to build a container that will run the site for you if you have [Docker](https://www.docker.com/) installed.
-
-You can build and execute the container by running the following command in the repository:
+## Preview locally
 
 ```bash
-chmod -R 777 .
-docker compose up
+tools/serve.sh            # http://127.0.0.1:4000, reloads when you save a file
 ```
 
-You should now be able to access the website from `localhost:4000`.
+Restart it after changing `_config.yml`. The first run installs gems into `vendor/bundle`.
+Requirements: Homebrew `ruby@3.3` and `imagemagick` (`brew install ruby@3.3 imagemagick`).
 
-### Using the DevContainer in VS Code
+## Publish
 
-If you are using [Visual Studio Code](https://code.visualstudio.com/) you can use the [Dev Container](https://code.visualstudio.com/docs/devcontainers/containers) that comes with this Repository. Normally VS Code detects that a development container configuration is available and asks you if you want to use the container. If this doesn't happen you can manually start the container by **F1->DevContainer: Reopen in Container**. This restarts your VS Code in the container and automatically hosts your academic page locally on http://localhost:4000. All changes will be updated live to that page after a few seconds.
+Push to `master`. The GitHub Action in `.github/workflows/deploy.yml` builds the site and pushes the
+result to the `gh-pages` branch. In the repository settings, **Pages → Source** must be set to
+"Deploy from a branch", branch `gh-pages`, folder `/ (root)`.
 
-# Maintenance
+## Where things live
 
-Bug reports and feature requests to the template should be [submitted via GitHub](https://github.com/academicpages/academicpages.github.io/issues/new/choose). For questions concerning how to style the template, please feel free to start a [new discussion on GitHub](https://github.com/academicpages/academicpages.github.io/discussions).
+| What | File(s) |
+| --- | --- |
+| Name, site description, feature switches | `_config.yml` |
+| Home page text, intro box (`intro:`), photo | `_pages/about.md`, `assets/img/prof_pic.jpg` |
+| Home page layout (name beside the photo) | `_layouts/about.liquid`, a local copy of the theme's layout |
+| Social links (email, Scholar, GitHub, LinkedIn, CV) | `_data/socials.yml` |
+| Contact pills at the top of the bio | `_includes/social_pills.liquid` |
+| Project cards (not shown now; add `{% include research_palette.liquid %}` to `_pages/about.md` to bring them back) | `_includes/research_palette.liquid` |
+| Publications | `_bibliography/papers.bib` |
+| Publication thumbnails | `assets/img/publication_preview/` |
+| Hover-to-explore frames on thumbnails | `_data/preview_frames.yml` |
+| Venue badge colors | `_data/venues.yml` |
+| Co-author homepage links | `_data/coauthors.yml` |
+| News items | `_news/*.md` (one file per item) |
+| Project pages with demos | `_projects/*.md` |
+| Demo data | `_data/demos/*.yml` |
+| Demo images | `assets/demos/<project>/` |
+| Demo scripts | `assets/js/custom/` |
+| Thesis page | `_pages/thesis.md` |
+| CV page / PDF | `_pages/cv.md`, `assets/pdf/CV.pdf` |
+| Custom styles | `_sass/_custom.scss` and `_sass/custom/` (fonts in `_typography.scss`, navbar blur and animations in `_motion.scss`) |
+| Scroll reveal and thumbnail hover | `assets/js/custom/enhance.js`, loaded by `_includes/enhance.liquid` |
+| Fonts (Inter, Newsreader, JetBrains Mono) | `third_party_libraries.google_fonts` in `_config.yml` |
+| Image preparation | `tools/build_assets.py` |
+| Drawn thumbnails (TraffSign, CARL-D, drivable road; no open figures) | `tools/thumbnails/*.svg`, rendered by `tools/render_thumbnails.py` |
 
-This repository was forked (then detached) by [Stuart Geiger](https://github.com/staeiou) from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/), which is © 2016 Michael Rose and released under the MIT License (see LICENSE.md). It is currently being maintained by [Robert Zupko](https://github.com/rjzupkoii), and additional maintainers would be welcome.
+## Common edits
 
-## Bugfixes and enhancements
+**Add a paper.** Add an entry to `_bibliography/papers.bib` (the header of that file lists the
+extra fields). Use `topic` for the publication filters (`color`, `benchmark`, `editing`,
+`privacy`, `driving`, `trustworthy`), `selected = {true}` to show it on the home page, and
+`preview = {name.jpg}` for a thumbnail in `assets/img/publication_preview/`. If you add a new
+topic, also add a button for it in `_pages/publications.md`.
 
-If you have bugfixes and enhancements that you would like to submit as a pull request, you will need to [fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo) this repository as opposed to using it as a template. This will also allow you to [synchronize your copy](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork) of the template to your fork as well.
+**Add a news item.** Create `_news/YYYY-MM-short-name.md`:
 
-Unfortunately, one logistical issue with a template theme like Academic Pages that makes it a little tricky to get bug fixes and updates to the core theme. If you use this template and customize it, you will probably get merge conflicts if you attempt to synchronize, although [rebasing](https://git-scm.com/docs/git-rebase) the changes from this template will work along with manually [cherry picking](https://git-scm.com/docs/git-cherry-pick) the relevant commits. If you are not comfortable with the Git command line, you can save your various `.yml` configuration files and Markdown files, delete the repository, and fork it again. 
-
+```markdown
 ---
-<div align="center">
-    
-![pages-build-deployment](https://github.com/academicpages/academicpages.github.io/actions/workflows/pages/pages-build-deployment/badge.svg)
-[![GitHub contributors](https://img.shields.io/github/contributors/academicpages/academicpages.github.io.svg)](https://github.com/academicpages/academicpages.github.io/graphs/contributors)
-[![GitHub release](https://img.shields.io/github/v/release/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io/releases/latest)
-[![GitHub license](https://img.shields.io/github/license/academicpages/academicpages.github.io?color=blue)](https://github.com/academicpages/academicpages.github.io/blob/master/LICENSE)
+layout: post
+date: 2026-11-01
+inline: true
+related_posts: false
+---
 
-[![GitHub stars](https://img.shields.io/github/stars/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io)
-[![GitHub forks](https://img.shields.io/github/forks/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io/fork)
-</div>
+[MyPaper](/projects/mypaper/) is accepted at **CVPR 2027**.
+```
+
+**Update the CV.** Replace `assets/pdf/CV.pdf` with the new export (keep the file name).
+
+**Change the photo.** Replace `assets/img/prof_pic.jpg` (square or portrait works best).
+
+**Add a project page.** Copy one of `_projects/*.md`, change the front matter (`permalink`,
+`title`, `importance` for ordering, `palette_color` for the home page chip, `venue`, `authors`,
+`links`) and the text. A page without a demo simply leaves out the `{% include demo.liquid %}` line.
+For a new demo, add images under `assets/demos/<name>/`, data in `_data/demos/<name>.yml`, and a
+script in `assets/js/custom/` that follows the pattern of the existing ones (each script finds its
+`[data-demo="<name>"]` container and reads the JSON inside it).
+
+**Regenerate demo images and thumbnails.** All images are cropped from the paper figures (the
+local paper sources in `~/Desktop/Data` and arXiv HTML figures), never generated:
+
+```bash
+python3 -m pip install pillow pymupdf
+python3 tools/build_assets.py
+```
+
+## Customizations on top of al-folio
+
+To keep theme updates painless, everything custom is kept apart from the theme:
+
+- `assets/css/main.scss` is a copy of the theme file with one added line, `@use "custom";`.
+  After a theme update, compare it with the gem's version
+  (`bundle exec al-folio upgrade overrides diff assets/css/main.scss`).
+- `_layouts/bib_meta.liquid` and `_includes/{demo,project_header,research_palette}.liquid` are new
+  files, not overrides of theme files.
+- `purgecss.config.js` safelists the custom class names, since the demos create elements at runtime.
+- The upstream al-folio test suite, agent files, and maintainer workflows were removed; only
+  `deploy.yml` is kept.
+
+## Updating al-folio
+
+```bash
+bundle update al_folio_core            # or another al_* gem
+bundle exec al-folio upgrade audit     # reports config changes the new version expects
+```
+
+Check the [al-folio releases](https://github.com/alshedivat/al-folio/releases) for anything that
+needs a manual change, then preview locally before pushing.

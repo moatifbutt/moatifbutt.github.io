@@ -1,0 +1,17 @@
+{%- comment -%}
+  Mount point for an interactive demo on a project page.
+
+    {% include demo.liquid name="numcolor" data=site.data.demos.numcolor script="numcolor-demo.js" %}
+
+  name    folder in assets/demos/ holding the images
+  data    data passed to the script as JSON (usually from _data/demos/)
+  script  file in assets/js/custom/ that builds the demo
+{%- endcomment -%}
+<div class="demo" data-demo="{{ include.name }}" data-base="{{ '/assets/demos/' | append: include.name | append: '/' | relative_url }}">
+  <script type="application/json">
+    {{ include.data | jsonify }}
+  </script>
+  <noscript><p>This demo needs JavaScript.</p></noscript>
+</div>
+<script src="{{ '/assets/js/custom/demo-utils.js' | relative_url | bust_file_cache }}" defer></script>
+<script src="{{ '/assets/js/custom/' | append: include.script | relative_url | bust_file_cache }}" defer></script>

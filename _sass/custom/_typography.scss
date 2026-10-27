@@ -1,0 +1,134 @@
+/* Typography: Trebuchet MS for text and headings (a system font, nothing to download),
+   Georgia for captions, Monaco/Consolas for code. Only Material Icons are loaded from
+   Google Fonts (`third_party_libraries.google_fonts` in _config.yml). */
+
+:root {
+  --site-font-sans: "Trebuchet MS", Helvetica, sans-serif;
+  // Headings use the same family as the text; the variable name is kept so other
+  // partials (project cards, year headings) follow along.
+  --site-font-serif: var(--site-font-sans);
+  --site-font-mono: Monaco, Consolas, "Lucida Console", monospace;
+}
+
+body {
+  font-family: var(--site-font-sans);
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+.post-title,
+.card-title {
+  font-family: var(--site-font-serif);
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+// Theme writes section headings in lowercase ("news", "selected publications").
+.post h2,
+.post-title {
+  text-transform: capitalize;
+}
+
+.post h2 {
+  font-size: 1.75rem;
+  margin-top: 2.75rem;
+  margin-bottom: 1rem;
+
+  a:hover {
+    text-decoration: none;
+  }
+}
+
+.post h3 {
+  font-size: 1.4rem;
+  margin-top: 2rem;
+}
+
+.post-title {
+  font-size: 2.5rem;
+  line-height: 1.1;
+}
+
+figcaption,
+.site-caption {
+  font-family: Georgia, Times, serif;
+}
+
+.post-description {
+  font-size: 1.05rem;
+  color: var(--global-text-color-light);
+}
+
+// Navbar brand: the name in the serif, with the last name lighter.
+.navbar-brand.title {
+  font-family: var(--site-font-serif);
+  font-size: 1.35rem;
+  font-weight: 400 !important;
+
+  .font-weight-bold {
+    font-weight: 500 !important;
+  }
+}
+
+// Home page name: one weight instead of the theme's bold first name.
+.post-title .font-weight-bold {
+  font-weight: inherit !important;
+}
+
+.navbar .nav-link {
+  font-weight: 500;
+  font-size: 0.95rem;
+  text-transform: capitalize;
+  color: var(--global-text-color-light) !important;
+  position: relative;
+
+  &:hover {
+    color: var(--global-text-color) !important;
+  }
+}
+
+// Selected tab: normal text color with a short accent underline.
+.navbar .nav-item.active > .nav-link {
+  color: var(--global-text-color) !important;
+  font-weight: 600;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0.5rem;
+    right: 0.5rem;
+    bottom: -2px;
+    height: 2px;
+    border-radius: 2px;
+    background: var(--global-theme-color);
+  }
+}
+
+code,
+kbd,
+pre,
+.mono {
+  font-family: var(--site-font-mono);
+}
+
+// Links in running text: thin animated underline instead of the default.
+.post p a,
+.news a {
+  text-decoration: none;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-size: 0% 1px;
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  transition: background-size 0.25s ease;
+
+  &:hover {
+    text-decoration: none;
+    background-size: 100% 1px;
+  }
+}

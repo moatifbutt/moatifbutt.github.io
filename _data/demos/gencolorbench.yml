@@ -1,0 +1,20 @@
+# GenColorBench quiz data, transcribed from the qualitative figure for the
+# color name understanding task. `pass` is the benchmark's decision.
+# Images q01..q16 are cropped by tools/build_assets.py in the same order.
+
+- { model: FLUX, prompt: "a photo of a taxi which is in pink color", pass: false }
+- { model: SD 3.5, prompt: "a green colored towel", pass: true }
+- { model: Sana, prompt: "a person wearing orange colored coat", pass: true }
+- { model: PixArt-α, prompt: "a single brown hat", pass: true }
+- { model: PixArt-δ, prompt: "a bluish green teapot", pass: false }
+- { model: BLIP3-o, prompt: "a blue boxing glove", pass: true }
+- { model: PixArt-δ, prompt: "a chair rendered in violet color", pass: true }
+- { model: SD 3, prompt: "a yellowish pink bicycle", pass: false }
+- { model: Sana, prompt: "a green colored carrot", pass: false }
+- { model: SD 3.5, prompt: "a reddish purple golf ball", pass: false }
+- { model: BLIP3-o, prompt: "a red kite", pass: true }
+- { model: Janus-Pro, prompt: "an olive brown cow", pass: true }
+- { model: OmniGen2, prompt: "a reddish brown clock", pass: true }
+- { model: SD 3, prompt: "a candle with yellow green color", pass: false }
+- { model: CogView4, prompt: "a book in yellowish brown color", pass: false }
+- { model: Bagel, prompt: "a greenish blue colored broccoli", pass: false }

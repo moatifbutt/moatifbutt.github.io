@@ -1,0 +1,23 @@
+{%- comment -%}
+  Header block for a project page: venue, authors and link buttons.
+  Reads `venue`, `authors` and `links` from the page front matter, e.g.
+
+    venue: ECCV 2024
+    authors: <strong>Muhammad Atif Butt</strong>, Kai Wang, ...
+    links:
+      - { name: Paper, url: https://arxiv.org/abs/..., icon: fa-solid fa-file-pdf }
+{%- endcomment -%}
+<div class="project-header">
+  {% if page.venue %}<span class="site-venue">{{ page.venue }}</span>{% endif %}
+  {% if page.authors %}<p class="site-authors">{{ page.authors }}</p>{% endif %}
+  {% if page.links %}
+    <div class="site-links">
+      {% for link in page.links %}
+        <a href="{{ link.url | relative_url }}">
+          {%- if link.icon %}<i class="{{ link.icon }}"></i>{% endif %}
+          {{ link.name -}}
+        </a>
+      {% endfor %}
+    </div>
+  {% endif %}
+</div>

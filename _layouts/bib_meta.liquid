@@ -1,0 +1,7 @@
+{%- comment -%}
+  Not a page layout. Used as a jekyll-scholar entry template on the
+  publications page (`{% bibliography --template bib_meta %}`) to expose each
+  entry's filter data to assets/js/custom/pub-filter.js without overriding the
+  theme's bib.liquid.
+{%- endcomment -%}
+<span class="pub-meta" data-key="{{ entry.key }}" data-topics="{{ entry.topic }}" data-selected="{{ entry.selected }}"></span>

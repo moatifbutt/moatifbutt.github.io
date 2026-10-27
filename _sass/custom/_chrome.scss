@@ -1,0 +1,86 @@
+/* Site chrome: navbar, headings, links. */
+
+// Thin spectrum line under the fixed navbar.
+#navbar {
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    background: var(--site-spectrum);
+    opacity: 0.85;
+  }
+}
+
+// Horizontal divider in the site's spectrum colors.
+.site-rule {
+  height: 2px;
+  border: 0;
+  margin: 2.5rem 0 1.5rem;
+  background: var(--site-spectrum);
+  opacity: 0.5;
+  border-radius: 2px;
+}
+
+// Generic card used by project pages and demos.
+.site-card {
+  background: var(--global-card-bg-color);
+  border: 1px solid var(--site-card-border);
+  border-radius: var(--site-radius);
+  box-shadow: var(--site-shadow);
+  padding: 1.25rem;
+}
+
+// Row of pill buttons (paper, code, arXiv) at the top of project pages.
+.site-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0.75rem 0 1.5rem;
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.35rem 0.85rem;
+    border: 1px solid var(--global-theme-color);
+    border-radius: 999px;
+    font-size: 0.9rem;
+    color: var(--global-theme-color);
+    transition:
+      background 0.15s ease,
+      color 0.15s ease;
+
+    &:hover {
+      background: var(--global-theme-color);
+      color: var(--global-bg-color);
+      text-decoration: none;
+    }
+  }
+}
+
+.site-venue {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--global-text-color-light);
+}
+
+.site-authors {
+  color: var(--global-text-color-light);
+  margin-bottom: 0;
+
+  strong {
+    color: var(--global-text-color);
+  }
+}
+
+.site-caption {
+  font-size: 0.875rem;
+  color: var(--global-text-color-light);
+  margin-top: 0.5rem;
+}

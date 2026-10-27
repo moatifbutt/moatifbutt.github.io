@@ -1,0 +1,38 @@
+/* Design tokens: accent colors and the spectrum gradient used across the site. */
+
+:root {
+  // Accent: navy.
+  --global-theme-color: #1d3557;
+  --global-hover-color: #1d3557;
+
+  --site-accent-soft: rgba(29, 53, 87, 0.06);
+  --site-card-border: rgba(0, 0, 0, 0.08);
+  --site-shadow: 0 1px 2px rgba(0, 0, 0, 0.04), 0 4px 16px rgba(0, 0, 0, 0.06);
+  --site-radius: 10px;
+  --site-ok: #1e8e3e;
+  --site-bad: #c5221f;
+
+  // A hue sweep, the visual signature of the site (navbar underline, dividers).
+  --site-spectrum: linear-gradient(
+    90deg,
+    #bf0f25 0%,
+    #fa9217 18%,
+    #fccf04 32%,
+    #33cc66 50%,
+    #1fafb4 64%,
+    #3254f7 80%,
+    #9933ff 100%
+  );
+}
+
+html[data-theme="dark"] {
+  // Navy is too dark on a dark background; a light steel blue keeps the same hue.
+  --global-theme-color: #9db8dc;
+  --global-hover-color: #9db8dc;
+
+  --site-accent-soft: rgba(157, 184, 220, 0.1);
+  --site-card-border: rgba(255, 255, 255, 0.1);
+  --site-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 4px 16px rgba(0, 0, 0, 0.3);
+  --site-ok: #81c995;
+  --site-bad: #f28b82;
+}

@@ -1,0 +1,8 @@
+{%- comment -%}
+  Page enhancements: scroll reveal and hover-to-explore publication thumbnails.
+  Include once near the end of a page: {% include enhance.liquid %}
+{%- endcomment -%}
+<script type="application/json" id="preview-frames" data-base="{{ '/assets/demos/' | relative_url }}">
+  {{ site.data.preview_frames | jsonify }}
+</script>
+<script src="{{ '/assets/js/custom/enhance.js' | relative_url | bust_file_cache }}" defer></script>

@@ -1,0 +1,101 @@
+/* Motion and depth: frosted navbar, scroll reveal, hover-to-explore thumbnails.
+   Behavior lives in assets/js/custom/enhance.js. */
+
+// Frosted-glass navbar.
+#navbar {
+  background: color-mix(in srgb, var(--global-bg-color) 78%, transparent) !important;
+  backdrop-filter: saturate(160%) blur(12px);
+  -webkit-backdrop-filter: saturate(160%) blur(12px);
+}
+
+// Elements fade up the first time they scroll into view. The class is only
+// added by JS, so without JS (or with reduced motion) everything is visible.
+.reveal {
+  opacity: 0;
+  transform: translateY(14px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+
+  &.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+// Publication thumbnails that step through results on hover.
+.scrub {
+  position: relative;
+  display: block;
+  cursor: ew-resize;
+
+  &__frame {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    opacity: 0;
+    transition: opacity 0.15s ease;
+    pointer-events: none;
+  }
+
+  &.is-active &__frame {
+    opacity: 1;
+  }
+
+  // Thin progress bar showing the position within the frames.
+  &__bar {
+    position: absolute;
+    left: 6px;
+    right: 6px;
+    bottom: 6px;
+    height: 3px;
+    border-radius: 3px;
+    background: rgba(255, 255, 255, 0.45);
+    opacity: 0;
+    transition: opacity 0.15s ease;
+    pointer-events: none;
+
+    span {
+      display: block;
+      height: 100%;
+      border-radius: 3px;
+      background: #fff;
+      width: 0;
+    }
+  }
+
+  &.is-active &__bar {
+    opacity: 1;
+  }
+
+  // Small hint badge shown before the first hover.
+  &__hint {
+    position: absolute;
+    right: 6px;
+    top: 6px;
+    font-size: 0.62rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    padding: 0.1rem 0.4rem;
+    border-radius: 999px;
+    background: rgba(0, 0, 0, 0.55);
+    color: #fff;
+    pointer-events: none;
+    transition: opacity 0.15s ease;
+  }
+
+  &.is-active &__hint {
+    opacity: 0;
+  }
+}

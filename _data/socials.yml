@@ -1,0 +1,9 @@
+# Social links shown on the home page, in the navbar and in the footer.
+# Supported keys: https://github.com/alshedivat/al-folio/blob/main/docs/CUSTOMIZE.md#adding-social-media-information
+# The order here is the order of the icons.
+
+email: mabutt@cvc.uab.es
+scholar_userid: vf7PeaoAAAAJ
+github_username: moatifbutt
+linkedin_username: moatifbutt
+cv_pdf: /assets/pdf/CV.pdf

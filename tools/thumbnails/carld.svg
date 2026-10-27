@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="360" viewBox="0 0 480 360">
+  <!-- CARL-D (SPIC 2022): street scene in semantic-segmentation colors with
+       vehicle bounding boxes. Illustration, not a figure from the paper. -->
+  <!-- sky -->
+  <rect width="480" height="360" fill="#4682b4"/>
+  <!-- buildings -->
+  <g fill="#464646">
+    <rect x="0" y="70" width="70" height="140"/>
+    <rect x="70" y="105" width="48" height="105"/>
+    <rect x="118" y="125" width="40" height="85"/>
+    <rect x="330" y="95" width="56" height="115"/>
+    <rect x="386" y="60" width="94" height="150"/>
+  </g>
+  <!-- vegetation -->
+  <g fill="#6b8e23">
+    <circle cx="178" cy="150" r="28"/><rect x="174" y="160" width="8" height="50"/>
+    <circle cx="306" cy="146" r="30"/><rect x="302" y="156" width="8" height="54"/>
+    <ellipse cx="455" cy="196" rx="40" ry="18"/>
+  </g>
+  <!-- sidewalks and road -->
+  <path d="M0 210 H480 V360 H0 Z" fill="#f423e8"/>
+  <path d="M-70 360 L205 210 L275 210 L550 360 Z" fill="#804080"/>
+  <!-- lane markings -->
+  <g fill="#ffffff" opacity="0.85">
+    <path d="M238 222 L242 222 L243 236 L237 236 Z"/>
+    <path d="M235 256 L245 256 L247 280 L233 280 Z"/>
+    <path d="M230 306 L250 306 L254 345 L226 345 Z"/>
+  </g>
+  <!-- traffic sign pole -->
+  <rect x="404" y="150" width="4" height="62" fill="#999999"/>
+  <rect x="394" y="132" width="24" height="22" fill="#dcdc00"/>
+
+  <!-- vehicles (segmentation class colour) -->
+  <g fill="#00008e">
+    <path d="M150 262 h96 v-14 l-14 -22 h-60 l-14 22 h-8 z"/>
+    <path d="M276 236 h58 v-10 l-9 -14 h-36 l-9 14 h-4 z"/>
+    <path d="M196 222 h30 v-6 l-5 -8 h-18 l-5 8 z"/>
+    <path d="M300 292 h120 v-18 l-18 -26 h-74 l-18 26 h-10 z"/>
+  </g>
+  <g fill="#0b0b2a">
+    <circle cx="170" cy="264" r="9"/><circle cx="228" cy="264" r="9"/>
+    <circle cx="290" cy="238" r="6"/><circle cx="322" cy="238" r="6"/>
+    <circle cx="324" cy="295" r="11"/><circle cx="398" cy="295" r="11"/>
+  </g>
+
+  <!-- detection boxes -->
+  <g fill="none" stroke-width="2.5">
+    <rect x="138" y="220" width="114" height="54" stroke="#ff3b3b"/>
+    <rect x="270" y="208" width="68" height="36" stroke="#ffd400"/>
+    <rect x="192" y="204" width="38" height="22" stroke="#00e5ff"/>
+    <rect x="290" y="244" width="136" height="62" stroke="#3bff6b"/>
+  </g>
+  <g font-family="Helvetica, Arial" font-size="11" font-weight="700" fill="#111">
+    <rect x="138" y="207" width="56" height="14" fill="#ff3b3b"/><text x="142" y="218">car 0.97</text>
+    <rect x="270" y="195" width="58" height="14" fill="#ffd400"/><text x="274" y="206">van 0.91</text>
+    <rect x="290" y="231" width="62" height="14" fill="#3bff6b"/><text x="294" y="242">bus 0.94</text>
+  </g>
+</svg>

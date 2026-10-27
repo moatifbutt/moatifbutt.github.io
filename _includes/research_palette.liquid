@@ -1,0 +1,25 @@
+{%- comment -%}
+  Home page cards, one per project page. Projects appear if they define
+  `palette_color`, ordered by `importance`. Each card shows the project image
+  (`img`) with a strip in the project's signature color.
+{%- endcomment -%}
+{% assign palette_projects = site.projects | where_exp: 'p', 'p.palette_color' | sort: 'importance' %}
+{% if palette_projects.size > 0 %}
+  <div class="research-palette">
+    <div class="research-palette__label">Research highlights · interactive demos</div>
+    <div class="research-palette__grid">
+      {% for p in palette_projects %}
+        <a class="palette-chip" href="{{ p.url | relative_url }}" style="--chip-color: {{ p.palette_color }}">
+          <div class="palette-chip__media">
+            {% if p.img %}<img src="{{ p.img | relative_url }}" alt="{{ p.title }}" loading="lazy">{% endif %}
+          </div>
+          <div class="palette-chip__swatch"></div>
+          <div class="palette-chip__body">
+            <div class="palette-chip__name">{{ p.title }}</div>
+            <div class="palette-chip__meta">{{ p.palette_color }} · {{ p.short_venue | default: p.venue }}</div>
+          </div>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+{% endif %}

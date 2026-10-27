@@ -1,0 +1,62 @@
+# Venue badges for publications. The key must match the `abbr` field in
+# _bibliography/papers.bib. Colors are kept muted so the thumbnails stand out.
+
+"Preprint":
+  color: "#5d6d7e"
+
+"CVPR":
+  url: https://cvpr.thecvf.com/
+  color: "#1f5fa8"
+
+"CVPR-W":
+  url: https://cvpr.thecvf.com/
+  color: "#4f86c6"
+
+"ECCV":
+  url: https://eccv.ecva.net/
+  color: "#b3261e"
+
+"WACV":
+  url: https://wacv.thecvf.com/
+  color: "#6a4c93"
+
+"NeurIPS":
+  url: https://neurips.cc/
+  color: "#7b3fa0"
+
+"NeurIPS-W":
+  url: https://neurips.cc/
+  color: "#9b6bbd"
+
+"ACM MM":
+  url: https://acmmm.org/
+  color: "#00796b"
+
+"IJCV":
+  url: https://link.springer.com/journal/11263
+  color: "#c25e00"
+
+"ACM CSUR":
+  url: https://dl.acm.org/journal/csur
+  color: "#2e7d32"
+
+"IEEE T-ITS":
+  color: "#00629b"
+
+"IEEE Access":
+  color: "#00629b"
+
+"DAS":
+  color: "#5d6d7e"
+
+"SPIC":
+  color: "#5d6d7e"
+
+"MTAP":
+  color: "#5d6d7e"
+
+"Sci. Rep.":
+  color: "#5d6d7e"
+
+"Comput. Secur.":
+  color: "#5d6d7e"

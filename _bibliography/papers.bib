@@ -1,0 +1,295 @@
+---
+---
+
+% ============================================================================
+% Publications of Muhammad Atif Butt
+%
+% How to add a paper
+%   1. Copy an entry below and change the fields.
+%   2. Optional site fields (hidden from the BibTeX shown to visitors):
+%        abbr      venue badge, colors defined in _data/venues.yml
+%        topic     comma-separated filter tags used on the publications page:
+%                  color, benchmark, editing, interpretability, privacy, driving, trustworthy
+%        selected  {true} shows the paper on the home page
+%        preview   image in assets/img/publication_preview/
+%        award     highlighted note, e.g. {Oral}
+%        arxiv / pdf / code / website / html   buttons under the entry
+%        bibtex_show {true} adds a "Bib" button
+%   3. Rebuild locally (bundle exec jekyll serve) and check the page.
+% ============================================================================
+
+% ---------------------------------------------------------------- 2026
+
+@article{butt2026kansteer,
+  abbr        = {Preprint},
+  topic       = {interpretability},
+  selected    = {true},
+  bibtex_show = {true},
+  title       = {Beyond the Linear Representation Hypothesis: Non-Linear Activation Steering in Text-to-Image Models},
+  author      = {Butt, Muhammad Atif and Skier{\'s}, Pawe{\l} and {van de Weijer}, Joost and Deja, Kamil},
+  journal     = {arXiv preprint},
+  year        = {2026},
+  arxiv       = {2610.06945},
+  preview     = {kansteer.jpg},
+  abstract    = {Mechanistic interpretability often relies on the Linear Representation Hypothesis, which assumes that high-level concepts are encoded as linear directions in activation space. Yet natural visual concepts often pass through genuine intermediate states, and when text-to-image models are prompted for intermediate attributes, their activations rarely fall on the straight line connecting the endpoints. KANSteer models concept traversal as a curve through these intermediate states using Kolmogorov-Arnold Networks, which provide a one-dimensional coordinate whose learned functions define the trajectory, so the steering direction varies along the concept while remaining interpretable. Across several concepts and text-to-image diffusion transformers, activation trajectories deviate substantially from straight lines, and KANSteer provides a closer fit and smoother traversal of intermediate attributes than linear steering.}
+}
+
+@inproceedings{butt2026numcolor,
+  abbr        = {ECCV},
+  topic       = {color},
+  selected    = {true},
+  bibtex_show = {true},
+  title       = {NumColor: Precise Numeric Color Control in Text-to-Image Generation},
+  author      = {Butt, Muhammad Atif and Hern{\'a}ndez, Diego and Gomez-Villa, Alexandra and Wang, Kai and Vazquez-Corral, Javier and {van de Weijer}, Joost},
+  booktitle   = {European Conference on Computer Vision (ECCV)},
+  year        = {2026},
+  doi         = {10.1007/978-3-032-37211-6_9},
+  arxiv       = {2603.13547},
+  code        = {https://github.com/moatifbutt/numcolor},
+  website     = {/projects/numcolor/},
+  preview     = {numcolor.jpg},
+  abstract    = {Text-to-image diffusion models struggle with numerical color specifications such as hex codes and RGB values, because subword tokenization splits color codes into fragments the text encoder cannot map to consistent colors. NumColor introduces a Color Token Aggregator that detects color specifications regardless of tokenization and a ColorBook of 6,707 learnable embeddings aligned with CIE Lab space, together with auxiliary losses that keep the Lab and embedding geometries consistent. Trained on NumColor-Data, a synthetic set of 500K rendered images with exact color-to-pixel correspondence, the model is trained only on FLUX and transfers zero-shot to SD3, SD3.5, and PixArt models.}
+}
+
+@inproceedings{butt2026gencolorbench,
+  abbr        = {CVPR},
+  topic       = {color, benchmark},
+  selected    = {true},
+  bibtex_show = {true},
+  title       = {GenColorBench: A Color Evaluation Benchmark for Text-to-Image Generation Models},
+  author      = {Butt, Muhammad Atif and Gomez-Villa, Alexandra and Wu, Tao and Vazquez-Corral, Javier and {van de Weijer}, Joost and Wang, Kai},
+  booktitle   = {IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  year        = {2026},
+  arxiv       = {2510.20586},
+  html        = {https://openaccess.thecvf.com/content/CVPR2026/html/Butt_GenColorBench_A_Color_Evaluation_Benchmark_for_Text-to-Image_Generation_CVPR_2026_paper.html},
+  code        = {https://github.com/moatifbutt/gen-color-bench},
+  website     = {/projects/gencolorbench/},
+  preview     = {gencolorbench.jpg},
+  abstract    = {Recent text-to-image models still struggle with fine-grained color controllability and often fail to match the colors specified in prompts. GenColorBench is a benchmark of about 44K color-focused prompts covering more than 400 colors, grounded in color systems such as ISCC-NBS and CSS3/X11 and including numerical colors. It evaluates five tasks (color name understanding, multi-color composition, color-object association, numeric color understanding, and implicit color association) by combining VQA with perceptual color metrics.}
+}
+
+@inproceedings{butt2026lumictrl,
+  abbr        = {CVPR-W},
+  topic       = {color},
+  selected    = {true},
+  bibtex_show = {true},
+  award       = {Oral},
+  award_name  = {Oral},
+  title       = {LumiCtrl: Learning Illuminant Prompts for Lighting Control in Personalized Text-to-Image Models},
+  author      = {Butt, Muhammad Atif and Wang, Kai and Vazquez-Corral, Javier and {van de Weijer}, Joost},
+  booktitle   = {IEEE/CVF CVPR Workshop on Computer Vision for Editing (CVEU)},
+  year        = {2026},
+  html        = {https://openaccess.thecvf.com/content/CVPR2026W/CVEU/html/Butt_LumiCtrl_Learning_Illuminant_Prompts_for_Lighting_Control_in__Personalized_CVPRW_2026_paper.html},
+  arxiv       = {2512.17489},
+  website     = {/projects/lumictrl/},
+  preview     = {lumictrl.jpg},
+  abstract    = {Text-to-image models lack precise control over illumination. LumiCtrl learns an illuminant prompt from a single image of an object using three components: physics-based illuminant augmentation along the Planckian locus, edge-guided prompt disentanglement with a frozen ControlNet so that the prompt captures light rather than structure, and a masked reconstruction loss that focuses learning on the foreground while letting the background adapt.}
+}
+
+@inproceedings{laria2026colorwave,
+  abbr        = {WACV},
+  topic       = {color},
+  bibtex_show = {true},
+  title       = {Leveraging Semantic Attribute Binding for Free-Lunch Color Control in Diffusion Models},
+  author      = {Laria, H{\'e}ctor and Gomez-Villa, Alexandra and Qin, Jiang and Butt, Muhammad Atif and Raducanu, Bogdan and Vazquez-Corral, Javier and {van de Weijer}, Joost and Wang, Kai},
+  booktitle   = {IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)},
+  year        = {2026},
+  html        = {https://openaccess.thecvf.com/content/WACV2026/html/Laria_Leveraging_Semantic_Attribute_Binding_for_Free-Lunch_Color_Control_in_Diffusion_WACV_2026_paper.html},
+  doi         = {10.1109/WACV61042.2026.00742},
+  arxiv       = {2503.09864},
+  preview     = {colorwave.jpg},
+  abstract    = {ColorWave is a training-free method for RGB-level color control in diffusion models. It shows that the cross-attention layers of IP-Adapter implicitly bind color words in the prompt to colors in a reference image, and rewires these bindings to attach the intended color to the intended object without any per-color optimization.}
+}
+
+% ---------------------------------------------------------------- 2025
+
+@inproceedings{xu2025haad,
+  abbr        = {ACM MM},
+  topic       = {privacy},
+  bibtex_show = {true},
+  title       = {An h-space Based Adversarial Attack for Protection Against Few-shot Personalization},
+  author      = {Xu, Xide and Kamath, Sandesh and Butt, Muhammad Atif and Raducanu, Bogdan},
+  booktitle   = {ACM International Conference on Multimedia (ACM MM)},
+  year        = {2025},
+  doi         = {10.1145/3746027.3755659},
+  arxiv       = {2507.17554},
+  preview     = {haad.jpg},
+  abstract    = {HAAD is an anti-customization attack that builds adversarial perturbations in the h-space of diffusion models to degrade unauthorized few-shot personalization. A variant, HAAD-KV, builds perturbations only from the key and value parameters of the h-space, giving stronger protection at a lower computational cost.}
+}
+
+@article{butt2025r2s100k,
+  abbr        = {IJCV},
+  topic       = {driving, benchmark},
+  bibtex_show = {true},
+  title       = {R2S100K: Road-Region Segmentation Dataset for Semi-Supervised Autonomous Driving in the Wild},
+  author      = {Butt, Muhammad Atif and Ali, Hassan and Qayyum, Adnan and Sultani, Waqas and Al-Fuqaha, Ala and Qadir, Junaid},
+  journal     = {International Journal of Computer Vision (IJCV)},
+  year        = {2025},
+  doi         = {10.1007/s11263-024-02207-3},
+  arxiv       = {2308.06393},
+  code        = {https://github.com/moatifbutt/r2s100k},
+  website     = {https://r2s100k.github.io/},
+  preview     = {r2s100k.jpg},
+  abstract    = {R2S100K is a large-scale dataset and benchmark for road-region segmentation on unstructured roads. It contains 100K images from video sequences covering more than 1000 km of roadways, with 14K finely labeled images and 86K unlabeled images for semi-supervised learning, and distinguishes safe asphalt from atypical surfaces such as potholes, water puddles, gravel, and earthen patches. A self-training framework based on Efficient Data Sampling exploits the unlabeled data.}
+}
+
+% ---------------------------------------------------------------- 2024
+
+@inproceedings{butt2024colorpeel,
+  abbr        = {ECCV},
+  topic       = {color},
+  selected    = {true},
+  bibtex_show = {true},
+  title       = {ColorPeel: Color Prompt Learning with Diffusion Models via Color and Shape Disentanglement},
+  author      = {Butt, Muhammad Atif and Wang, Kai and Vazquez-Corral, Javier and {van de Weijer}, Joost},
+  booktitle   = {European Conference on Computer Vision (ECCV)},
+  year        = {2024},
+  doi         = {10.1007/978-3-031-72667-5_26},
+  arxiv       = {2407.07197},
+  html        = {https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/1191_ECCV_2024_paper.php},
+  code        = {https://github.com/moatifbutt/color-peel},
+  website     = {/projects/colorpeel/},
+  preview     = {colorpeel.jpg},
+  abstract    = {Text-to-image models accept color names, but names cover wide ranges, so matching an exact color is hard, and existing personalization methods entangle color with object shape. ColorPeel generates simple 2D and 3D geometric shapes in the target color and learns a color prompt from them, explicitly disentangling color from shape so that the learned token carries color alone. The approach extends to abstract attributes such as textures and materials.}
+}
+
+@inproceedings{xu2024copsam,
+  abbr        = {NeurIPS-W},
+  topic       = {privacy},
+  bibtex_show = {true},
+  title       = {Privacy Protection in Personalized Diffusion Models via Targeted Cross-Attention Adversarial Attack},
+  author      = {Xu, Xide and Butt, Muhammad Atif and Kamath, Sandesh and Raducanu, Bogdan},
+  booktitle   = {NeurIPS Workshop on Safe Generative AI},
+  year        = {2024},
+  arxiv       = {2411.16437},
+  preview     = {copsam.jpg},
+  abstract    = {CoPSAM (Concept Protection by Selective Attention Manipulation) protects user images against unauthorized personalization by targeting only the cross-attention layers of a text-to-image diffusion model, maximizing the discrepancy between the attention maps of the user-specific token and the class-specific token.}
+}
+
+@article{qayyum2024aixr,
+  abbr        = {ACM CSUR},
+  topic       = {trustworthy},
+  bibtex_show = {true},
+  title       = {Secure and Trustworthy Artificial Intelligence-Extended Reality (AI-XR) for Metaverses},
+  preview     = {aixr.jpg},
+  author      = {Qayyum, Adnan and Butt, Muhammad Atif and Ali, Hassan and Usman, Muhammad and Halabi, Osama and Al-Fuqaha, Ala and Abbasi, Qammer H. and Imran, Muhammad Ali and Qadir, Junaid},
+  journal     = {ACM Computing Surveys},
+  volume      = {56},
+  number      = {7},
+  year        = {2024},
+  doi         = {10.1145/3614426},
+  arxiv       = {2210.13289}
+}
+
+@article{ali2024crowdflow,
+  abbr        = {IEEE T-ITS},
+  topic       = {trustworthy, driving},
+  bibtex_show = {true},
+  title       = {Consistent Valid Physically-Realizable Adversarial Attack Against Crowd-Flow Prediction Models},
+  preview     = {crowdflow.jpg},
+  author      = {Ali, Hassan and Butt, Muhammad Atif and Filali, Fethi and Al-Fuqaha, Ala and Qadir, Junaid},
+  journal     = {IEEE Transactions on Intelligent Transportation Systems},
+  year        = {2024},
+  arxiv       = {2303.02669},
+  doi         = {10.1109/TITS.2023.3343971}
+}
+
+% ---------------------------------------------------------------- 2023
+
+@inproceedings{wang2023dpl,
+  abbr        = {NeurIPS},
+  topic       = {editing},
+  bibtex_show = {true},
+  title       = {Dynamic Prompt Learning: Addressing Cross-Attention Leakage for Text-Based Image Editing},
+  author      = {Wang, Kai and Yang, Fei and Yang, Shiqi and Butt, Muhammad Atif and {van de Weijer}, Joost},
+  booktitle   = {Advances in Neural Information Processing Systems (NeurIPS)},
+  year        = {2023},
+  arxiv       = {2309.15664},
+  html        = {https://proceedings.neurips.cc/paper_files/paper/2023/hash/5321b1dabcd2be188d796c21b733e8c7-Abstract.html},
+  code        = {https://github.com/wangkai930418/DPL},
+  preview     = {dpl.jpg},
+  abstract    = {Text-based image editing often makes unintended changes to the background or to distractor objects. We show that inaccurate cross-attention maps are at the root of this problem and propose Dynamic Prompt Learning (DPL), which forces cross-attention maps to focus on the correct noun words in the prompt, enabling fine-grained edits of particular objects while preventing undesired changes elsewhere.}
+}
+
+@article{butt2023embeddedml,
+  abbr        = {Comput. Secur.},
+  topic       = {trustworthy},
+  bibtex_show = {true},
+  title       = {Towards Secure Private and Trustworthy Human-Centric Embedded Machine Learning: An Emotion-Aware Facial Recognition Case Study},
+  preview     = {embeddedml.jpg},
+  author      = {Butt, Muhammad Atif and Qayyum, Adnan and Ali, Hassan and Al-Fuqaha, Ala and Qadir, Junaid},
+  journal     = {Computers \& Security},
+  volume      = {125},
+  pages       = {103058},
+  year        = {2023},
+  doi         = {10.1016/j.cose.2022.103058}
+}
+
+@article{qayyum2023dental,
+  abbr        = {Sci. Rep.},
+  topic       = {trustworthy},
+  bibtex_show = {true},
+  title       = {Dental Caries Detection Using a Semi-Supervised Learning Approach},
+  preview     = {dental.jpg},
+  author      = {Qayyum, Adnan and Tahir, A. and Butt, Muhammad Atif and Luke, A. and Abbas, H. and Qadir, Junaid and Arshad, K. and Assaleh, K. and Imran, Muhammad Ali and Abbasi, Qammer H.},
+  journal     = {Scientific Reports},
+  year        = {2023},
+  doi         = {10.1038/s41598-023-27808-9}
+}
+
+% ---------------------------------------------------------------- 2022
+
+@inproceedings{butt2022traffsign,
+  abbr        = {DAS},
+  topic       = {driving},
+  bibtex_show = {true},
+  title       = {TraffSign: Multilingual Traffic Signboard Text Detection and Recognition for Urdu and English},
+  preview     = {traffsign.jpg},
+  author      = {Butt, Muhammad Atif and Ul-Hasan, Adnan and Shafait, Faisal},
+  booktitle   = {IAPR International Workshop on Document Analysis Systems (DAS)},
+  year        = {2022},
+  doi         = {10.1007/978-3-031-06555-2_50},
+  code        = {https://github.com/moatifbutt/TraffSign}
+}
+
+@article{butt2022carld,
+  abbr        = {SPIC},
+  topic       = {driving, benchmark},
+  bibtex_show = {true},
+  title       = {CARL-D: A Vision Benchmark and Large-scale Dataset for Vehicle Detection and Scene Segmentation},
+  preview     = {carld.jpg},
+  author      = {Butt, Muhammad Atif and Riaz, Faisal},
+  journal     = {Signal Processing: Image Communication},
+  year        = {2022},
+  code        = {https://github.com/moatifbutt/CARL-dataset},
+  doi         = {10.1016/j.image.2022.116667},
+  website     = {https://carl-dataset.github.io/index/}
+}
+
+@article{javed2022facemask,
+  abbr        = {MTAP},
+  topic       = {trustworthy},
+  bibtex_show = {true},
+  title       = {Face Mask Detection and Social Distance Monitoring System for COVID-19 Pandemic},
+  preview     = {facemask.jpg},
+  author      = {Javed, I. and Butt, Muhammad Atif and Khalid, S. and Shehryar, T. and Amin, R. and Syed, A. M. and Sadiq, M.},
+  journal     = {Multimedia Tools and Applications},
+  year        = {2022},
+  code        = {https://github.com/moatifbutt/Face-Mask-Detection},
+  doi         = {10.1007/s11042-022-13913-w}
+}
+
+% ---------------------------------------------------------------- 2021
+
+@article{rasib2021drivable,
+  abbr        = {IEEE Access},
+  topic       = {driving},
+  bibtex_show = {true},
+  title       = {Pixel Level Segmentation Based Drivable Road Region Detection and Steering Angle Estimation Method for Autonomous Driving on Unstructured Roads},
+  preview     = {drivable.jpg},
+  author      = {Rasib, M. and Butt, Muhammad Atif and Riaz, Faisal and Sulaiman, A. and Akram, M.},
+  journal     = {IEEE Access},
+  year        = {2021},
+  doi         = {10.1109/ACCESS.2021.3134889},
+  code        = {https://github.com/moatifbutt/Drivable-Road-Region-Detection-and-Steering-Angle-Estimation-Method}
+}

@@ -1,0 +1,12 @@
+# LumiCtrl demo data. Images come from the paper's qualitative figure
+# (input image + 7 learned illuminant tokens c1..c7), cropped by tools/build_assets.py.
+
+illuminants: 7
+concepts:
+  - { id: portrait_hat, label: Portrait }
+  - { id: portrait_sitting, label: Portrait }
+  - { id: portrait_glasses, label: Portrait }
+  - { id: dog_window, label: Indoor }
+  - { id: bedroom, label: Indoor }
+  - { id: llama, label: Scenic }
+  - { id: sheep, label: Scenic }

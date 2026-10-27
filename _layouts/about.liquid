@@ -1,0 +1,99 @@
+---
+layout: default
+---
+{%- comment -%}
+  Local override of al_folio_core's about layout (gem 1.0.15).
+  Change from the theme: the top of the page is a two-column .about-hero. The left
+  column holds the name, subtitle, contact buttons and the intro box (page.intro),
+  with the box pushed down; the photo in the right column stretches to the same height.
+  The bio (page content) follows at full width. Styles: _sass/custom/_home.scss.
+{%- endcomment -%}
+<div class="post">
+
+  <article>
+    <div class="about-hero">
+      <div class="about-hero__text">
+        <header class="post-header">
+          <h1 class="post-title">
+            {% if site.title == 'blank' %}
+              <span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }}
+              {{ site.last_name }}
+            {% else %}
+              {{ site.title }}
+            {% endif %}
+          </h1>
+          <p class="desc">{{ page.subtitle }}</p>
+        </header>
+
+        {% include social_pills.liquid %}
+
+        {% if page.intro %}
+          <div class="about-hero__intro">{{ page.intro | markdownify }}</div>
+        {% endif %}
+      </div>
+
+      {% if page.profile %}
+        <div class="profile about-hero__photo">
+          {% if page.profile.image %}
+            {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
+            {% if page.profile.image_circular %}
+              {% assign profile_image_class = 'img-fluid z-depth-1 rounded-circle' %}
+            {% else %}
+              {% assign profile_image_class = 'img-fluid z-depth-1
+        rounded' %}
+            {% endif %}
+            {% capture sizes %}(min-width: {{ site.max_width }}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px)
+        30vw, 95vw"{% endcapture %}
+            {%
+              include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=page.profile.image
+              cache_bust=true
+            %}
+          {% endif %}
+        </div>
+      {% endif %}
+    </div>
+
+    <div class="clearfix">{{ content }}</div>
+
+    <!-- News -->
+    {% if page.announcements and page.announcements.enabled %}
+      <h2>
+        <a href="{{ '/news/' | relative_url }}" style="color: inherit">news</a>
+      </h2>
+      {% include news.liquid limit=true %}
+    {% endif %}
+
+    <!-- Latest posts -->
+    {% if page.latest_posts and page.latest_posts.enabled %}
+      <h2>
+        <a href="{{ '/blog/' | relative_url }}" style="color: inherit">latest posts</a>
+      </h2>
+      {% include latest_posts.liquid %}
+    {% endif %}
+
+    <!-- Selected papers -->
+    {% if page.selected_papers %}
+      <h2>
+        <a href="{{ '/publications/' | relative_url }}" style="color: inherit">selected publications</a>
+      </h2>
+      {% include selected_papers.liquid %}
+    {% endif %}
+
+    <!-- Social -->
+    {% if page.social %}
+      <div class="social">
+        <div class="contact-icons">{% social_links %}</div>
+
+        <div class="contact-note">{{ site.contact_note }}</div>
+      </div>
+    {% endif %}
+
+    {% if site.newsletter and site.newsletter.enabled and site.footer_fixed %}
+      {% if site.plugins contains 'al_newsletter' %}
+        {% include plugins/al_newsletter_form_center_margin.liquid %}
+      {% else %}
+        {% include newsletter.liquid center=true %}
+      {% endif %}
+    {% endif %}
+  </article>
+</div>

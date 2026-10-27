@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="360" viewBox="0 0 480 360">
+  <!-- Drivable road region and steering angle (IEEE Access 2021): unpaved road
+       with the drivable region highlighted and a steering readout.
+       Illustration, not a figure from the paper. -->
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#a9d3f0"/>
+      <stop offset="1" stop-color="#f1e9d2"/>
+    </linearGradient>
+    <linearGradient id="dirt" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#b89670"/>
+      <stop offset="1" stop-color="#9c7650"/>
+    </linearGradient>
+  </defs>
+  <rect width="480" height="360" fill="url(#sky)"/>
+  <!-- distant hills -->
+  <path d="M0 160 Q80 120 160 150 T320 140 T480 150 V200 H0 Z" fill="#9db58a"/>
+  <!-- fields -->
+  <rect y="170" width="480" height="190" fill="#8fae5c"/>
+  <path d="M0 220 Q140 200 260 214 T480 205 V360 H0 Z" fill="#7b9c4a"/>
+  <!-- curving unpaved road -->
+  <path d="M10 360 C120 300 200 250 246 200 C258 188 266 180 274 170 L292 170 C288 182 284 194 280 206 C266 252 310 300 450 360 Z" fill="url(#dirt)"/>
+  <!-- potholes and gravel -->
+  <g fill="#7d5c3c">
+    <ellipse cx="205" cy="300" rx="22" ry="7"/>
+    <ellipse cx="268" cy="248" rx="12" ry="4"/>
+  </g>
+  <ellipse cx="300" cy="322" rx="26" ry="8" fill="#6f8fa6" opacity="0.8"/>
+  <!-- drivable region overlay -->
+  <path d="M110 360 C178 308 230 258 258 210 C265 198 271 188 278 178 L285 178 C282 188 278 200 274 212 C264 256 286 302 340 360 Z" fill="#22d36b" opacity="0.38"/>
+  <path d="M110 360 C178 308 230 258 258 210 C265 198 271 188 278 178 L285 178 C282 188 278 200 274 212 C264 256 286 302 340 360" fill="none" stroke="#0e8f45" stroke-width="2.5"/>
+  <!-- planned path -->
+  <path d="M219 360 C226 300 250 250 268 206" fill="none" stroke="#ffffff" stroke-width="4" stroke-dasharray="10 8" stroke-linecap="round"/>
+  <path d="M268 206 l-12 6 m12 -6 l2 13" stroke="#ffffff" stroke-width="4" fill="none" stroke-linecap="round"/>
+
+  <!-- steering readout -->
+  <g transform="translate(410 70)">
+    <circle r="44" fill="#ffffff" opacity="0.92"/>
+    <circle r="30" fill="none" stroke="#1d3557" stroke-width="7"/>
+    <circle r="7" fill="#1d3557"/>
+    <g transform="rotate(14)" stroke="#1d3557" stroke-width="6" stroke-linecap="round">
+      <line x1="-28" y1="0" x2="-7" y2="0"/>
+      <line x1="7" y1="0" x2="28" y2="0"/>
+      <line x1="0" y1="7" x2="0" y2="28"/>
+    </g>
+    <text y="62" text-anchor="middle" font-family="Helvetica, Arial" font-weight="700" font-size="15" fill="#1d3557">+14°</text>
+  </g>
+</svg>

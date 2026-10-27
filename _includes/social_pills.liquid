@@ -1,0 +1,28 @@
+{%- comment -%}
+  Contact buttons at the top of the home page.
+  Reads the same keys as the theme's social icons (_data/socials.yml).
+  Each button sets --brand, which tints its icon badge and hover border (_sass/custom/_home.scss).
+{%- endcomment -%}
+{% assign s = site.data.socials %}
+<div class="hero-links">
+  {% if s.email %}
+    <a href="mailto:{{ s.email }}" title="{{ s.email }}" style="--brand: var(--global-theme-color)">
+      <span class="hero-links__icon"><i class="fa-solid fa-envelope"></i></span>Email
+    </a>
+  {% endif %}
+  {% if s.scholar_userid %}
+    <a href="https://scholar.google.com/citations?user={{ s.scholar_userid }}" target="_blank" rel="noopener" style="--brand: #4285f4">
+      <span class="hero-links__icon"><i class="fa-brands fa-google-scholar"></i></span>Scholar
+    </a>
+  {% endif %}
+  {% if s.github_username %}
+    <a href="https://github.com/{{ s.github_username }}" target="_blank" rel="noopener" style="--brand: var(--global-text-color)">
+      <span class="hero-links__icon"><i class="fa-brands fa-github"></i></span>GitHub
+    </a>
+  {% endif %}
+  {% if s.linkedin_username %}
+    <a href="https://www.linkedin.com/in/{{ s.linkedin_username }}" target="_blank" rel="noopener" style="--brand: #0a66c2">
+      <span class="hero-links__icon"><i class="fa-brands fa-linkedin-in"></i></span>LinkedIn
+    </a>
+  {% endif %}
+</div>

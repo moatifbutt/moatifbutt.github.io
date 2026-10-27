@@ -1,0 +1,6 @@
+# Co-author names in publications link to these pages.
+# Key = last name in lowercase, as written in papers.bib.
+
+"wang":
+  - firstname: ["Kai", "K."]
+    url: https://wangkai930418.github.io/

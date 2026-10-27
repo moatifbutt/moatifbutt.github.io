@@ -1,0 +1,168 @@
+/* Publications: thumbnails, venue badges and the filter bar. */
+
+.publications {
+  .preview {
+    border-radius: 8px;
+    transition: transform 0.2s ease;
+  }
+
+  li:hover .preview {
+    transform: scale(1.03);
+  }
+
+  .abbr abbr.badge {
+    border-radius: 6px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+  }
+
+  // Hidden items while filtering.
+  li.is-filtered-out,
+  h2.is-filtered-out {
+    display: none;
+  }
+}
+
+// Filter bar above the list.
+.pub-filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.5rem 0 1.5rem;
+
+  &__group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  &__sep {
+    width: 1px;
+    height: 1.5rem;
+    background: var(--global-divider-color);
+    margin: 0 0.35rem;
+  }
+
+  &__count {
+    margin-left: auto;
+    font-size: 0.85rem;
+    color: var(--global-text-color-light);
+  }
+}
+
+.pub-chip {
+  border: 1px solid var(--site-card-border);
+  background: transparent;
+  color: var(--global-text-color);
+  border-radius: 999px;
+  padding: 0.25rem 0.8rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition:
+    background 0.15s ease,
+    border-color 0.15s ease,
+    color 0.15s ease;
+
+  &:hover {
+    border-color: var(--global-theme-color);
+  }
+
+  &[aria-pressed="true"] {
+    background: var(--global-theme-color);
+    border-color: var(--global-theme-color);
+    color: var(--global-bg-color);
+  }
+}
+
+// Data used for filtering; never shown.
+.pub-meta {
+  display: none;
+}
+
+// On phones the theme stacks the thumbnail above the entry at full width;
+// keep it small so the list stays scannable.
+@media (max-width: 576px) {
+  .publications .preview {
+    max-width: 180px;
+    margin-bottom: 0.5rem;
+  }
+}
+
+// ---- Entry styling
+.publications {
+  ol.bibliography > li {
+    padding: 0.9rem 0.75rem;
+    margin: 0 -0.75rem 0.4rem;
+    border-radius: 12px;
+    transition: background 0.2s ease;
+
+    &:hover {
+      background: var(--site-accent-soft);
+    }
+  }
+
+  .title {
+    font-weight: 600;
+    font-size: 1.02rem;
+    line-height: 1.4;
+    margin-bottom: 0.15rem;
+  }
+
+  .author {
+    font-size: 0.92rem;
+    color: var(--global-text-color-light);
+
+    // Your own name.
+    > em {
+      color: var(--global-text-color);
+      font-weight: 600;
+      border-bottom: 2px solid var(--global-theme-color);
+    }
+  }
+
+  .periodical {
+    font-size: 0.88rem;
+    color: var(--global-text-color-light);
+  }
+
+  .links a.btn {
+    border-radius: 999px;
+    border: 1px solid var(--site-card-border);
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    padding: 0.18rem 0.75rem;
+    margin: 0.4rem 0.3rem 0 0;
+    text-transform: none;
+
+    &:hover {
+      border-color: var(--global-theme-color);
+      color: var(--global-theme-color);
+      background: transparent;
+    }
+  }
+
+  .links a.award.btn {
+    border-color: var(--global-highlight-color);
+    color: var(--global-highlight-color);
+    font-weight: 600;
+  }
+
+  // Year headings: large, quiet numerals on the left.
+  h2.bibliography {
+    font-family: var(--site-font-serif);
+    font-size: 2rem;
+    text-align: left;
+    color: var(--global-text-color-light);
+    opacity: 0.5;
+    border-top: 0;
+    margin-top: 2.25rem;
+    padding-top: 0;
+  }
+
+  .abbr abbr.badge {
+    font-size: 0.68rem;
+    padding: 0.3rem 0.4rem;
+  }
+}

@@ -1,0 +1,52 @@
+# Frames shown when hovering a publication thumbnail (home page and
+# publications page). Key = BibTeX key in _bibliography/papers.bib.
+# Paths are relative to assets/demos/. Order is left-to-right on the thumbnail.
+
+butt2026kansteer:
+  - kansteer/hair_0.jpg
+  - kansteer/hair_1.jpg
+  - kansteer/hair_2.jpg
+  - kansteer/hair_3.jpg
+  - kansteer/hair_4.jpg
+  - kansteer/hair_5.jpg
+  - kansteer/hair_6.jpg
+  - kansteer/hair_7.jpg
+
+butt2026numcolor:
+  - numcolor/e7f3f6_teddybear.jpg
+  - numcolor/6f6967_teddybear.jpg
+  - numcolor/3bb124_teddybear.jpg
+  - numcolor/33cc66_teddybear.jpg
+  - numcolor/fa9217_teddybear.jpg
+  - numcolor/fe7605_teddybear.jpg
+  - numcolor/f53e00_teddybear.jpg
+  - numcolor/f9110f_teddybear.jpg
+
+butt2026gencolorbench:
+  - gencolorbench/q05.jpg
+  - gencolorbench/q06.jpg
+  - gencolorbench/q07.jpg
+  - gencolorbench/q08.jpg
+  - gencolorbench/q09.jpg
+  - gencolorbench/q10.jpg
+  - gencolorbench/q11.jpg
+  - gencolorbench/q13.jpg
+
+butt2026lumictrl:
+  - lumictrl/llama_c1.jpg
+  - lumictrl/llama_c2.jpg
+  - lumictrl/llama_c3.jpg
+  - lumictrl/llama_c4.jpg
+  - lumictrl/llama_c5.jpg
+  - lumictrl/llama_c6.jpg
+  - lumictrl/llama_c7.jpg
+
+butt2024colorpeel:
+  - colorpeel/cabin.jpg
+  - colorpeel/rose.jpg
+  - colorpeel/cup.jpg
+  - colorpeel/cat.jpg
+  - colorpeel/rose_pot.jpg
+  - colorpeel/puppy.jpg
+  - colorpeel/kid.jpg
+  - colorpeel/parrot.jpg

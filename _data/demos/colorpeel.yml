@@ -1,0 +1,19 @@
+# ColorPeel demo data. Images are cropped from the paper's teaser figure by
+# tools/build_assets.py. Prompts are copied from the figure.
+
+tokens:
+  - { id: c1, rgb: [215, 208, 41], train: train_c1.jpg }
+  - { id: c2, rgb: [81, 200, 81], train: train_c2.jpg }
+  - { id: c3, rgb: [38, 117, 195], train: train_c3.jpg }
+  - { id: c4, rgb: [191, 15, 37], train: train_c4.jpg }
+
+# In `prompt`, {c1}..{c4} mark the learned color tokens.
+outputs:
+  - { file: cabin.jpg, prompt: "a {c4} cabin in the snow" }
+  - { file: rose.jpg, prompt: "a {c2} rose blooming in a wooden pot" }
+  - { file: cup.jpg, prompt: "a {c1} cup on the table in a coffee shop" }
+  - { file: cat.jpg, prompt: "a beautiful cat with {c3} eyes" }
+  - { file: rose_pot.jpg, prompt: "a {c1} rose in {c3} pot placed in a restaurant" }
+  - { file: puppy.jpg, prompt: "a cute puppy wearing a winter hat and scarf knitted in {c2} and {c3} color" }
+  - { file: kid.jpg, prompt: "a kid wearing sweater in {c1} and {c4} color" }
+  - { file: parrot.jpg, prompt: "a {c4} parrot with {c3} and {c1} wings perched on a tree" }
