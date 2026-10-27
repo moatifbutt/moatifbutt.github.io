@@ -1,0 +1,168 @@
+<!DOCTYPE html> <html lang="en"> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title> ColorPeel | Muhammad Atif Butt </title> <meta name="author" content="Muhammad Atif Butt"> <meta name="description" content="Color prompt learning with diffusion models via color and shape disentanglement."> <meta name="keywords" content="text-to-image generation, diffusion models, color, controllable generation, personalization, computer vision"> <meta property="og:site_name" content="Muhammad Atif Butt"> <meta property="og:type" content="website"> <meta property="og:title" content="Muhammad Atif Butt | ColorPeel"> <meta property="og:url" content="https://moatifbutt.github.io/projects/colorpeel/"> <meta property="og:description" content="Color prompt learning with diffusion models via color and shape disentanglement."> <meta property="og:locale" content="en"> <meta name="twitter:card" content="summary"> <meta name="twitter:title" content="ColorPeel"> <meta name="twitter:description" content="Color prompt learning with diffusion models via color and shape disentanglement."> <script type="application/ld+json">
+    {
+        "author":
+        {
+            "@type": "Person",
+            "name": "Muhammad Atif Butt"
+        },
+        "url": "https://moatifbutt.github.io/projects/colorpeel/",
+        "@type": "WebSite",
+        "description": "Color prompt learning with diffusion models via color and shape disentanglement.",
+        "headline": "ColorPeel",
+        
+        "sameAs": ["https://scholar.google.com/citations?user=vf7PeaoAAAAJ","https://github.com/moatifbutt","https://www.linkedin.com/in/moatifbutt",null],
+        
+        "name": "Muhammad Atif Butt",
+        "@context": "https://schema.org"
+    }
+  </script> <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' data: https:; media-src 'self' https:; frame-src 'self' https:; connect-src 'self' https:;"> <style>
+  :root {
+    --max-content-width: 930px;
+  }
+</style> <link rel="stylesheet" href="/assets/css/tailwind.css?v=50c64c15cbb9fd1ce6056fdb8bcb4b62"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" integrity="sha256-MVopmdyC2tYTiJ8wlktf0uh0v4NgT+vNdyVFepi7Q0c=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.5/css/academicons.min.css" integrity="sha256-SzrCOBJbGVFMahewkgjwnApaV2+av1DwMAA+/QGLyZw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/scholar-icons@1.0.3/css/scholar-icons.css" integrity="sha256-VY3hHVj/hNX3fYG6wtbA6TcKJQl7+FthzGSyIB64klY=" crossorigin="anonymous"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Material+Icons&amp;display=swap"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?v=591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="/assets/img/favicon.png?v=160c5e71dd3ebf52836183eb0930f9cd"> <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png?v=6114fe78ff8b1af11ce068289c540db8"> <link rel="stylesheet" href="/assets/css/main.css?v=3116ba77db9ee1581d05bb3e86fbf7f1"> <link rel="canonical" href="https://moatifbutt.github.io/projects/colorpeel/"> <script src="/assets/js/theme.js?v=5286c3e4c334d0ecb8fc0c40ff4fa7ec"></script> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?v=5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> <script>
+    initTheme();
+  </script> </head> <body class="fixed-top-nav sticky-bottom-footer"> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"> <span class="font-weight-bold">Muhammad</span> Atif Butt </a> <button class="navbar-toggler collapsed navbar-toggler-main" type="button" data-nav-toggle="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse navbar-collapse-main" id="navbarNav"> <ul class="navbar-nav navbar-menu-list flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/">about </a> </li> <li class="nav-item "> <a class="nav-link" href="/publications/">publications </a> </li> <li class="nav-item "> <a class="nav-link" href="/cv/">CV </a> </li> <li class="nav-item"> <button id="search-toggle" type="button" title="Search" aria-label="Open search"> <span class="nav-link">ctrl k <i class="fa-solid fa-magnifying-glass"></i></span> </button> </li> <li class="toggle-container"> <button id="light-toggle" type="button" title="Change theme" aria-label="Change color theme"> <i class="fa-half-sun-moon" id="light-toggle-system"></i> <i class="fa-solid fa-moon" id="light-toggle-dark"></i> <i class="fa-solid fa-sun" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title">ColorPeel</h1> <p class="post-description">Color prompt learning with diffusion models via color and shape disentanglement.</p> </header> <article> <div class="project-header"> <span class="site-venue">ECCV 2024</span> <p class="site-authors"><strong>Muhammad Atif Butt</strong>, Kai Wang, Javier Vazquez-Corral, Joost van de Weijer</p> <div class="site-links"> <a href="https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/1191_ECCV_2024_paper.php" rel="external nofollow noopener" target="_blank"><i class="fa-solid fa-file-lines"></i> Paper</a> <a href="https://arxiv.org/abs/2407.07197" rel="external nofollow noopener" target="_blank"><i class="ai ai-arxiv"></i> arXiv</a> <a href="https://github.com/moatifbutt/color-peel" rel="external nofollow noopener" target="_blank"><i class="fa-brands fa-github"></i> Code</a> <a href="https://moatifbutt.github.io/colorpeel/"><i class="fa-solid fa-globe"></i> Project page</a> <a href="/publications/#butt2024colorpeel"><i class="fa-solid fa-quote-right"></i> BibTeX</a> </div> </div> <p>A color name like “red” covers a wide range of shades, so a prompt cannot pin down the exact red a designer has in mind. ColorPeel learns a new prompt token for each user-chosen color. It trains on simple 2D and 3D shapes rendered in the target colors and learns separate color and shape tokens, which <strong>peels</strong> the color away from the shape. The learned color tokens can then be used in any prompt, alone or combined.</p> <div class="demo__title">Explore the learned colors</div> <div class="demo__hint">Each token was learned from the shapes shown on its card. Click a token to see which generations use it. Images are from the paper.</div> <div class="demo" data-demo="colorpeel" data-base="/assets/demos/colorpeel/"> <script type="application/json">
+    {"tokens":[{"id":"c1","rgb":[215,208,41],"train":"train_c1.jpg"},{"id":"c2","rgb":[81,200,81],"train":"train_c2.jpg"},{"id":"c3","rgb":[38,117,195],"train":"train_c3.jpg"},{"id":"c4","rgb":[191,15,37],"train":"train_c4.jpg"}],"outputs":[{"file":"cabin.jpg","prompt":"a {c4} cabin in the snow"},{"file":"rose.jpg","prompt":"a {c2} rose blooming in a wooden pot"},{"file":"cup.jpg","prompt":"a {c1} cup on the table in a coffee shop"},{"file":"cat.jpg","prompt":"a beautiful cat with {c3} eyes"},{"file":"rose_pot.jpg","prompt":"a {c1} rose in {c3} pot placed in a restaurant"},{"file":"puppy.jpg","prompt":"a cute puppy wearing a winter hat and scarf knitted in {c2} and {c3} color"},{"file":"kid.jpg","prompt":"a kid wearing sweater in {c1} and {c4} color"},{"file":"parrot.jpg","prompt":"a {c4} parrot with {c3} and {c1} wings perched on a tree"}]}
+  </script> <noscript><p>This demo needs JavaScript.</p></noscript> </div> <script src="/assets/js/custom/demo-utils.js?v=679c1c063faf70867285afc680286cf9" defer></script> <script src="/assets/js/custom/colorpeel-demo.js?v=7297e51edad10898a2809aae0d5f56db" defer></script> <hr class="site-rule"> <h3 id="why-shapes">Why shapes?</h3> <p>When existing personalization methods learn a color from real photos, the token absorbs the shape of the objects too, and the color leaks into unrelated parts of the image. Rendering basic geometric shapes gives precise control over the color and makes shape an independent factor, and a cross-attention alignment loss keeps each token focused on its own attribute. The same idea extends to abstract attributes such as textures and materials.</p> </article> </div> </div> <footer class="sticky-bottom mt-5" role="contentinfo"> <div class="container"> © Copyright 2026 Muhammad Atif Butt. Built with <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> and <a href="https://github.com/alshedivat/al-folio" target="_blank" rel="external nofollow noopener">al-folio</a>. Hosted on <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. Last updated: October 27, 2026. </div> </footer> <script>
+  window.alFolio = {
+    compatBootstrap: false
+  };
+</script> <script src="/assets/js/nav-toggle.js?v=141bd79a73ebc0f0b6ea58e440ae79fc"></script> <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script> <script defer src="/assets/js/masonry.js?v=e49affc7bd2646f6acdad1dbe02c2359" type="text/javascript"></script> <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI=" crossorigin="anonymous"></script> <script src="/assets/al_math/js/mathjax-setup.js"></script> <script src="/assets/js/tooltips-setup.js?v=fe487e99db6c43751e6e7bdb2d6a0611"></script> <script src="/assets/js/no_defer.js?v=53b1b1a645525975c963ce8bf8bfefcf"></script> <script defer src="/assets/js/common.js?v=87baac90f765f2f3362dcf6aaf312a8a"></script> <script defer src="/assets/js/copy_code.js?v=c8a01c11a92744d44b093fc3bda915df" type="text/javascript"></script> <script defer src="/assets/js/jupyter_new_tab.js?v=896d254890d9b47f0281f63bfccf0dee"></script> <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script> <script defer src="/assets/al_img_tools/js/zoom.js"></script> <script src="https://cdn.jsdelivr.net/npm/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js" integrity="sha256-uMJJ3EoTyfRBoTbR+lrfu1uRQ87RZG8AR3cVNuQVeFg=" crossorigin="anonymous"></script> <script>
+    addBackToTop();
+  </script> <script type="module" src="/assets/al_search/js/search/ninja-keys.min.js"></script> <ninja-keys hidebreadcrumbs noautoloadmdicons placeholder="Type to start searching"></ninja-keys> <script src="/assets/al_search/js/search-setup.js"></script> <script>
+// get the ninja-keys element
+const ninja = document.querySelector('ninja-keys');
+
+// add the home and posts menu items
+ninja.data = [{
+    id: "nav-about",
+    title: "about",
+    section: "Navigation",
+    handler: () => {
+      window.location.href = "/";
+    },
+  },{id: "nav-publications",
+          title: "publications",
+          description: "Papers and preprints in reverse chronological order. Use the filters to narrow the list.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/publications/";
+          },
+        },{id: "nav-cv",
+          title: "CV",
+          description: "Curriculum vitae. To update, replace assets/pdf/CV.pdf with a new export.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/cv/";
+          },
+        },{id: "news-started-my-phd-in-the-lamp-team-at-the-computer-vision-center-barcelona",
+          title: 'Started my PhD in the LAMP team at the Computer Vision Center, Barcelona....',
+          description: "",
+          section: "News",},{id: "news-dynamic-prompt-learning-on-cross-attention-leakage-in-text-based-image-editing-is-accepted-at-neurips-2023",
+          title: 'Dynamic Prompt Learning, on cross-attention leakage in text-based image editing, is accepted at...',
+          description: "",
+          section: "News",},{id: "news-colorpeel-is-accepted-at-eccv-2024",
+          title: 'ColorPeel is accepted at ECCV 2024.',
+          description: "",
+          section: "News",},{id: "news-gencolorbench-a-color-evaluation-benchmark-for-text-to-image-models-is-accepted-at-cvpr-2026",
+          title: 'GenColorBench, a color evaluation benchmark for text-to-image models, is accepted at CVPR 2026....',
+          description: "",
+          section: "News",},{id: "news-lumictrl-is-accepted-as-an-oral-at-the-cveu-workshop-at-cvpr-2026",
+          title: 'LumiCtrl is accepted as an oral at the CVEU workshop at CVPR 2026....',
+          description: "",
+          section: "News",},{id: "news-starting-a-research-visit-at-the-computer-vision-lab-warsaw-university-of-technology-working-on-interpretability-of-text-to-image-models-supported-by-the-elias-mobility-fund",
+          title: 'Starting a research visit at the Computer Vision Lab, Warsaw University of Technology,...',
+          description: "",
+          section: "News",},{id: "news-recognized-as-an-outstanding-reviewer-at-cvpr-2026",
+          title: 'Recognized as an Outstanding Reviewer at CVPR 2026.',
+          description: "",
+          section: "News",},{id: "news-numcolor-on-precise-numeric-color-control-in-text-to-image-generation-is-accepted-at-eccv-2026",
+          title: 'NumColor, on precise numeric color control in text-to-image generation, is accepted at ECCV...',
+          description: "",
+          section: "News",},{id: "news-recognized-as-an-outstanding-reviewer-at-eccv-2026",
+          title: 'Recognized as an Outstanding Reviewer at ECCV 2026.',
+          description: "",
+          section: "News",},{id: "projects-numcolor",
+          title: 'NumColor',
+          description: "Precise numeric color control in text-to-image generation. Type a hex code, get that color.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/numcolor/";
+            },},{id: "projects-gencolorbench",
+          title: 'GenColorBench',
+          description: "A color evaluation benchmark for text-to-image models. Can you beat the benchmark at judging color?",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/gencolorbench/";
+            },},{id: "projects-lumictrl",
+          title: 'LumiCtrl',
+          description: "Learning illuminant prompts for lighting control in personalized text-to-image models. Oral at CVEU, CVPR 2026.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/lumictrl/";
+            },},{id: "projects-colorpeel",
+          title: 'ColorPeel',
+          description: "Color prompt learning with diffusion models via color and shape disentanglement.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/colorpeel/";
+            },},{
+        id: 'social-email',
+        title: 'email',
+        section: 'Socials',
+        handler: () => {
+          window.open("mailto:%6D%61%62%75%74%74@%63%76%63.%75%61%62.%65%73", "_blank");
+        },
+      },{
+        id: 'social-scholar',
+        title: 'Google Scholar',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://scholar.google.com/citations?user=vf7PeaoAAAAJ", "_blank");
+        },
+      },{
+        id: 'social-github',
+        title: 'GitHub',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://github.com/moatifbutt", "_blank");
+        },
+      },{
+        id: 'social-linkedin',
+        title: 'LinkedIn',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://www.linkedin.com/in/moatifbutt", "_blank");
+        },
+      },{
+        id: 'social-cv',
+        title: 'CV',
+        section: 'Socials',
+        handler: () => {
+          window.open("/assets/pdf/CV.pdf", "_blank");
+        },
+      },{
+      id: 'light-theme',
+      title: 'Change theme to light',
+      description: 'Change the theme of the site to Light',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("light");
+      },
+    },
+    {
+      id: 'dark-theme',
+      title: 'Change theme to dark',
+      description: 'Change the theme of the site to Dark',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("dark");
+      },
+    },
+    {
+      id: 'system-theme',
+      title: 'Use system default theme',
+      description: 'Change the theme of the site to System Default',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("system");
+      },
+    },];
+
+</script> <script src="/assets/al_search/js/shortcut-key.js"></script> </body> </html>

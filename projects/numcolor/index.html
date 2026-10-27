@@ -1,0 +1,168 @@
+<!DOCTYPE html> <html lang="en"> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title> NumColor | Muhammad Atif Butt </title> <meta name="author" content="Muhammad Atif Butt"> <meta name="description" content="Precise numeric color control in text-to-image generation. Type a hex code, get that color."> <meta name="keywords" content="text-to-image generation, diffusion models, color, controllable generation, personalization, computer vision"> <meta property="og:site_name" content="Muhammad Atif Butt"> <meta property="og:type" content="website"> <meta property="og:title" content="Muhammad Atif Butt | NumColor"> <meta property="og:url" content="https://moatifbutt.github.io/projects/numcolor/"> <meta property="og:description" content="Precise numeric color control in text-to-image generation. Type a hex code, get that color."> <meta property="og:locale" content="en"> <meta name="twitter:card" content="summary"> <meta name="twitter:title" content="NumColor"> <meta name="twitter:description" content="Precise numeric color control in text-to-image generation. Type a hex code, get that color."> <script type="application/ld+json">
+    {
+        "author":
+        {
+            "@type": "Person",
+            "name": "Muhammad Atif Butt"
+        },
+        "url": "https://moatifbutt.github.io/projects/numcolor/",
+        "@type": "WebSite",
+        "description": "Precise numeric color control in text-to-image generation. Type a hex code, get that color.",
+        "headline": "NumColor",
+        
+        "sameAs": ["https://scholar.google.com/citations?user=vf7PeaoAAAAJ","https://github.com/moatifbutt","https://www.linkedin.com/in/moatifbutt",null],
+        
+        "name": "Muhammad Atif Butt",
+        "@context": "https://schema.org"
+    }
+  </script> <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' data: https:; media-src 'self' https:; frame-src 'self' https:; connect-src 'self' https:;"> <style>
+  :root {
+    --max-content-width: 930px;
+  }
+</style> <link rel="stylesheet" href="/assets/css/tailwind.css?v=50c64c15cbb9fd1ce6056fdb8bcb4b62"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" integrity="sha256-MVopmdyC2tYTiJ8wlktf0uh0v4NgT+vNdyVFepi7Q0c=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.5/css/academicons.min.css" integrity="sha256-SzrCOBJbGVFMahewkgjwnApaV2+av1DwMAA+/QGLyZw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/scholar-icons@1.0.3/css/scholar-icons.css" integrity="sha256-VY3hHVj/hNX3fYG6wtbA6TcKJQl7+FthzGSyIB64klY=" crossorigin="anonymous"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Material+Icons&amp;display=swap"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?v=591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="/assets/img/favicon.png?v=160c5e71dd3ebf52836183eb0930f9cd"> <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png?v=6114fe78ff8b1af11ce068289c540db8"> <link rel="stylesheet" href="/assets/css/main.css?v=3116ba77db9ee1581d05bb3e86fbf7f1"> <link rel="canonical" href="https://moatifbutt.github.io/projects/numcolor/"> <script src="/assets/js/theme.js?v=5286c3e4c334d0ecb8fc0c40ff4fa7ec"></script> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?v=5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> <script>
+    initTheme();
+  </script> </head> <body class="fixed-top-nav sticky-bottom-footer"> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"> <span class="font-weight-bold">Muhammad</span> Atif Butt </a> <button class="navbar-toggler collapsed navbar-toggler-main" type="button" data-nav-toggle="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse navbar-collapse-main" id="navbarNav"> <ul class="navbar-nav navbar-menu-list flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/">about </a> </li> <li class="nav-item "> <a class="nav-link" href="/publications/">publications </a> </li> <li class="nav-item "> <a class="nav-link" href="/cv/">CV </a> </li> <li class="nav-item"> <button id="search-toggle" type="button" title="Search" aria-label="Open search"> <span class="nav-link">ctrl k <i class="fa-solid fa-magnifying-glass"></i></span> </button> </li> <li class="toggle-container"> <button id="light-toggle" type="button" title="Change theme" aria-label="Change color theme"> <i class="fa-half-sun-moon" id="light-toggle-system"></i> <i class="fa-solid fa-moon" id="light-toggle-dark"></i> <i class="fa-solid fa-sun" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title">NumColor</h1> <p class="post-description">Precise numeric color control in text-to-image generation. Type a hex code, get that color.</p> </header> <article> <div class="project-header"> <span class="site-venue">ECCV 2026</span> <p class="site-authors"><strong>Muhammad Atif Butt</strong>, Diego Hernández, Alexandra Gomez-Villa, Kai Wang, Javier Vazquez-Corral, Joost van de Weijer</p> <div class="site-links"> <a href="https://arxiv.org/abs/2603.13547" rel="external nofollow noopener" target="_blank"><i class="fa-solid fa-file-lines"></i> Paper</a> <a href="https://github.com/moatifbutt/numcolor" rel="external nofollow noopener" target="_blank"><i class="fa-brands fa-github"></i> Code</a> <a href="/publications/#butt2026numcolor"><i class="fa-solid fa-quote-right"></i> BibTeX</a> </div> </div> <p>Ask a text-to-image model for “a #3254F7 car” and it will usually ignore the code. The tokenizer splits <code class="language-plaintext highlighter-rouge">#3254F7</code> into fragments that carry no color meaning, so the model falls back to its own idea of the object. NumColor fixes this without retraining the generator. A <strong>Color Token Aggregator</strong> finds color codes in the prompt however they are tokenized, and a <strong>ColorBook</strong> of learnable embeddings, aligned with the perceptually uniform CIE Lab space, turns each code into an embedding the text encoder understands.</p> <div class="demo__title">Try it</div> <div class="demo__hint">Pick one of the colors used in the paper, or choose any color and the demo jumps to the closest one. All images are results from the paper (FLUX with NumColor).</div> <div class="demo" data-demo="numcolor" data-base="/assets/demos/numcolor/"> <script type="application/json">
+    [{"hex":"#000D36","category":"coarse","images":[{"object":"vase","file":"000d36_vase.jpg"},{"object":"shoes","file":"000d36_shoes.jpg"},{"object":"backpack","file":"000d36_backpack.jpg"},{"object":"bucket","file":"000d36_bucket.jpg"}]},{"hex":"#E7F3F6","category":"coarse","images":[{"object":"car","file":"e7f3f6_car.jpg"},{"object":"wardrobe","file":"e7f3f6_wardrobe.jpg"},{"object":"rug","file":"e7f3f6_rug.jpg"},{"object":"teddybear","file":"e7f3f6_teddybear.jpg"}]},{"hex":"#EA1E16","category":"coarse","images":[{"object":"parrot","file":"ea1e16_parrot.jpg"},{"object":"shirt","file":"ea1e16_shirt.jpg"},{"object":"mug","file":"ea1e16_mug.jpg"},{"object":"owl","file":"ea1e16_owl.jpg"}]},{"hex":"#FCCF04","category":"coarse","images":[{"object":"backpack","file":"fccf04_backpack.jpg"},{"object":"bedsheet","file":"fccf04_bedsheet.jpg"},{"object":"couch","file":"fccf04_couch.jpg"},{"object":"vase","file":"fccf04_vase.jpg"}]},{"hex":"#ED6909","category":"coarse","images":[{"object":"mug","file":"ed6909_mug.jpg"},{"object":"wardrobe","file":"ed6909_wardrobe.jpg"},{"object":"rug","file":"ed6909_rug.jpg"},{"object":"rose","file":"ed6909_rose.jpg"}]},{"hex":"#3BB124","category":"coarse","images":[{"object":"teddybear","file":"3bb124_teddybear.jpg"},{"object":"car","file":"3bb124_car.jpg"},{"object":"bucket","file":"3bb124_bucket.jpg"},{"object":"bedsheet","file":"3bb124_bedsheet.jpg"}]},{"hex":"#020007","category":"fine","images":[{"object":"car","file":"020007_car.jpg"},{"object":"owl","file":"020007_owl.jpg"},{"object":"bedsheet","file":"020007_bedsheet.jpg"},{"object":"trouser","file":"020007_trouser.jpg"}]},{"hex":"#4B4644","category":"fine","images":[{"object":"shoes","file":"4b4644_shoes.jpg"},{"object":"backpack","file":"4b4644_backpack.jpg"},{"object":"bucket","file":"4b4644_bucket.jpg"},{"object":"parrot","file":"4b4644_parrot.jpg"}]},{"hex":"#6F6967","category":"fine","images":[{"object":"wardrobe","file":"6f6967_wardrobe.jpg"},{"object":"shirt","file":"6f6967_shirt.jpg"},{"object":"trouser","file":"6f6967_trouser.jpg"},{"object":"teddybear","file":"6f6967_teddybear.jpg"}]},{"hex":"#968F8D","category":"fine","images":[{"object":"shoes","file":"968f8d_shoes.jpg"},{"object":"backpack","file":"968f8d_backpack.jpg"},{"object":"couch","file":"968f8d_couch.jpg"},{"object":"bedsheet","file":"968f8d_bedsheet.jpg"}]},{"hex":"#BEB7B5","category":"fine","images":[{"object":"couch","file":"beb7b5_couch.jpg"},{"object":"vase","file":"beb7b5_vase.jpg"},{"object":"shirt","file":"beb7b5_shirt.jpg"},{"object":"car","file":"beb7b5_car.jpg"}]},{"hex":"#E8E1DF","category":"fine","images":[{"object":"owl","file":"e8e1df_owl.jpg"},{"object":"car","file":"e8e1df_car.jpg"},{"object":"backpack","file":"e8e1df_backpack.jpg"},{"object":"mug","file":"e8e1df_mug.jpg"}]},{"hex":"#1D0AE7","category":"fine","images":[{"object":"car","file":"1d0ae7_car.jpg"},{"object":"shoes","file":"1d0ae7_shoes.jpg"},{"object":"rug","file":"1d0ae7_rug.jpg"},{"object":"backpack","file":"1d0ae7_backpack.jpg"}]},{"hex":"#3254F7","category":"fine","images":[{"object":"bedsheet","file":"3254f7_bedsheet.jpg"},{"object":"shirt","file":"3254f7_shirt.jpg"},{"object":"parrot","file":"3254f7_parrot.jpg"},{"object":"car","file":"3254f7_car.jpg"}]},{"hex":"#2E89D2","category":"fine","images":[{"object":"bucket","file":"2e89d2_bucket.jpg"},{"object":"rose","file":"2e89d2_rose.jpg"},{"object":"vase","file":"2e89d2_vase.jpg"},{"object":"bedsheet","file":"2e89d2_bedsheet.jpg"}]},{"hex":"#009CCA","category":"fine","images":[{"object":"shoes","file":"009cca_shoes.jpg"},{"object":"door","file":"009cca_door.jpg"},{"object":"parrot","file":"009cca_parrot.jpg"},{"object":"wardrobe","file":"009cca_wardrobe.jpg"}]},{"hex":"#1FAFB4","category":"fine","images":[{"object":"couch","file":"1fafb4_couch.jpg"},{"object":"bucket","file":"1fafb4_bucket.jpg"},{"object":"bedsheet","file":"1fafb4_bedsheet.jpg"},{"object":"mug","file":"1fafb4_mug.jpg"}]},{"hex":"#FB3316","category":"fine","images":[{"object":"car","file":"fb3316_car.jpg"},{"object":"owl","file":"fb3316_owl.jpg"},{"object":"mug","file":"fb3316_mug.jpg"},{"object":"shirt","file":"fb3316_shirt.jpg"}]},{"hex":"#F53E00","category":"fine","images":[{"object":"vase","file":"f53e00_vase.jpg"},{"object":"backpack","file":"f53e00_backpack.jpg"},{"object":"teddybear","file":"f53e00_teddybear.jpg"},{"object":"bucket","file":"f53e00_bucket.jpg"}]},{"hex":"#F95D0E","category":"fine","images":[{"object":"trouser","file":"f95d0e_trouser.jpg"},{"object":"bucket","file":"f95d0e_bucket.jpg"},{"object":"shoe","file":"f95d0e_shoe.jpg"},{"object":"wardrobe","file":"f95d0e_wardrobe.jpg"}]},{"hex":"#FE7605","category":"fine","images":[{"object":"car","file":"fe7605_car.jpg"},{"object":"mug","file":"fe7605_mug.jpg"},{"object":"shirt","file":"fe7605_shirt.jpg"},{"object":"teddybear","file":"fe7605_teddybear.jpg"}]},{"hex":"#FA9217","category":"fine","images":[{"object":"curtain","file":"fa9217_curtain.jpg"},{"object":"teddybear","file":"fa9217_teddybear.jpg"},{"object":"vase","file":"fa9217_vase.jpg"},{"object":"bucket","file":"fa9217_bucket.jpg"}]},{"hex":"#FEBB03","category":"fine","images":[{"object":"owl","file":"febb03_owl.jpg"},{"object":"bedsheet","file":"febb03_bedsheet.jpg"},{"object":"car","file":"febb03_car.jpg"},{"object":"rose","file":"febb03_rose.jpg"}]},{"hex":"#33CC66","category":"interpolated","images":[{"object":"shoe","file":"33cc66_shoe.jpg"},{"object":"backpack","file":"33cc66_backpack.jpg"},{"object":"bedsheet","file":"33cc66_bedsheet.jpg"},{"object":"teddybear","file":"33cc66_teddybear.jpg"}]},{"hex":"#9933FF","category":"interpolated","images":[{"object":"bucket","file":"9933ff_bucket.jpg"},{"object":"bedsheet","file":"9933ff_bedsheet.jpg"},{"object":"trouser","file":"9933ff_trouser.jpg"},{"object":"shoes","file":"9933ff_shoes.jpg"}]},{"hex":"#F9110F","category":"interpolated","images":[{"object":"vase","file":"f9110f_vase.jpg"},{"object":"car","file":"f9110f_car.jpg"},{"object":"teddybear","file":"f9110f_teddybear.jpg"},{"object":"backpack","file":"f9110f_backpack.jpg"}]},{"hex":"#CCD0AC","category":"interpolated","images":[{"object":"shoes","file":"ccd0ac_shoes.jpg"},{"object":"bedsheet","file":"ccd0ac_bedsheet.jpg"},{"object":"couch","file":"ccd0ac_couch.jpg"},{"object":"shirt","file":"ccd0ac_shirt.jpg"}]},{"hex":"#B63442","category":"interpolated","images":[{"object":"mug","file":"b63442_mug.jpg"},{"object":"vase","file":"b63442_vase.jpg"},{"object":"car","file":"b63442_car.jpg"},{"object":"backpack","file":"b63442_backpack.jpg"}]},{"hex":"#F8E14D","category":"interpolated","images":[{"object":"wardrobe","file":"f8e14d_wardrobe.jpg"},{"object":"rug","file":"f8e14d_rug.jpg"},{"object":"trouser","file":"f8e14d_trouser.jpg"},{"object":"rose","file":"f8e14d_rose.jpg"}]}]
+  </script> <noscript><p>This demo needs JavaScript.</p></noscript> </div> <script src="/assets/js/custom/demo-utils.js?v=679c1c063faf70867285afc680286cf9" defer></script> <script src="/assets/js/custom/numcolor-demo.js?v=6c07d5ba7b99bad3a694352b41b910b4" defer></script> <hr class="site-rule"> <h3 id="how-it-works">How it works</h3> <p>ColorBook is trained on <strong>NumColor-Data</strong>, a synthetic dataset of rendered images with an exact color-to-pixel correspondence. Two auxiliary losses keep the geometry of Lab space in the embedding space, so nearby colors get nearby embeddings and interpolation between codes stays smooth. NumColor is trained only on FLUX, yet it transfers zero-shot to SD3, SD3.5, PixArt-α, and PixArt-Σ, and it substantially improves numerical color accuracy and color harmony on <a href="/projects/gencolorbench/">GenColorBench</a>.</p> </article> </div> </div> <footer class="sticky-bottom mt-5" role="contentinfo"> <div class="container"> © Copyright 2026 Muhammad Atif Butt. Built with <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> and <a href="https://github.com/alshedivat/al-folio" target="_blank" rel="external nofollow noopener">al-folio</a>. Hosted on <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. Last updated: October 27, 2026. </div> </footer> <script>
+  window.alFolio = {
+    compatBootstrap: false
+  };
+</script> <script src="/assets/js/nav-toggle.js?v=141bd79a73ebc0f0b6ea58e440ae79fc"></script> <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script> <script defer src="/assets/js/masonry.js?v=e49affc7bd2646f6acdad1dbe02c2359" type="text/javascript"></script> <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI=" crossorigin="anonymous"></script> <script src="/assets/al_math/js/mathjax-setup.js"></script> <script src="/assets/js/tooltips-setup.js?v=fe487e99db6c43751e6e7bdb2d6a0611"></script> <script src="/assets/js/no_defer.js?v=53b1b1a645525975c963ce8bf8bfefcf"></script> <script defer src="/assets/js/common.js?v=87baac90f765f2f3362dcf6aaf312a8a"></script> <script defer src="/assets/js/copy_code.js?v=c8a01c11a92744d44b093fc3bda915df" type="text/javascript"></script> <script defer src="/assets/js/jupyter_new_tab.js?v=896d254890d9b47f0281f63bfccf0dee"></script> <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script> <script defer src="/assets/al_img_tools/js/zoom.js"></script> <script src="https://cdn.jsdelivr.net/npm/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js" integrity="sha256-uMJJ3EoTyfRBoTbR+lrfu1uRQ87RZG8AR3cVNuQVeFg=" crossorigin="anonymous"></script> <script>
+    addBackToTop();
+  </script> <script type="module" src="/assets/al_search/js/search/ninja-keys.min.js"></script> <ninja-keys hidebreadcrumbs noautoloadmdicons placeholder="Type to start searching"></ninja-keys> <script src="/assets/al_search/js/search-setup.js"></script> <script>
+// get the ninja-keys element
+const ninja = document.querySelector('ninja-keys');
+
+// add the home and posts menu items
+ninja.data = [{
+    id: "nav-about",
+    title: "about",
+    section: "Navigation",
+    handler: () => {
+      window.location.href = "/";
+    },
+  },{id: "nav-publications",
+          title: "publications",
+          description: "Papers and preprints in reverse chronological order. Use the filters to narrow the list.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/publications/";
+          },
+        },{id: "nav-cv",
+          title: "CV",
+          description: "Curriculum vitae. To update, replace assets/pdf/CV.pdf with a new export.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/cv/";
+          },
+        },{id: "news-started-my-phd-in-the-lamp-team-at-the-computer-vision-center-barcelona",
+          title: 'Started my PhD in the LAMP team at the Computer Vision Center, Barcelona....',
+          description: "",
+          section: "News",},{id: "news-dynamic-prompt-learning-on-cross-attention-leakage-in-text-based-image-editing-is-accepted-at-neurips-2023",
+          title: 'Dynamic Prompt Learning, on cross-attention leakage in text-based image editing, is accepted at...',
+          description: "",
+          section: "News",},{id: "news-colorpeel-is-accepted-at-eccv-2024",
+          title: 'ColorPeel is accepted at ECCV 2024.',
+          description: "",
+          section: "News",},{id: "news-gencolorbench-a-color-evaluation-benchmark-for-text-to-image-models-is-accepted-at-cvpr-2026",
+          title: 'GenColorBench, a color evaluation benchmark for text-to-image models, is accepted at CVPR 2026....',
+          description: "",
+          section: "News",},{id: "news-lumictrl-is-accepted-as-an-oral-at-the-cveu-workshop-at-cvpr-2026",
+          title: 'LumiCtrl is accepted as an oral at the CVEU workshop at CVPR 2026....',
+          description: "",
+          section: "News",},{id: "news-starting-a-research-visit-at-the-computer-vision-lab-warsaw-university-of-technology-working-on-interpretability-of-text-to-image-models-supported-by-the-elias-mobility-fund",
+          title: 'Starting a research visit at the Computer Vision Lab, Warsaw University of Technology,...',
+          description: "",
+          section: "News",},{id: "news-recognized-as-an-outstanding-reviewer-at-cvpr-2026",
+          title: 'Recognized as an Outstanding Reviewer at CVPR 2026.',
+          description: "",
+          section: "News",},{id: "news-numcolor-on-precise-numeric-color-control-in-text-to-image-generation-is-accepted-at-eccv-2026",
+          title: 'NumColor, on precise numeric color control in text-to-image generation, is accepted at ECCV...',
+          description: "",
+          section: "News",},{id: "news-recognized-as-an-outstanding-reviewer-at-eccv-2026",
+          title: 'Recognized as an Outstanding Reviewer at ECCV 2026.',
+          description: "",
+          section: "News",},{id: "projects-numcolor",
+          title: 'NumColor',
+          description: "Precise numeric color control in text-to-image generation. Type a hex code, get that color.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/numcolor/";
+            },},{id: "projects-gencolorbench",
+          title: 'GenColorBench',
+          description: "A color evaluation benchmark for text-to-image models. Can you beat the benchmark at judging color?",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/gencolorbench/";
+            },},{id: "projects-lumictrl",
+          title: 'LumiCtrl',
+          description: "Learning illuminant prompts for lighting control in personalized text-to-image models. Oral at CVEU, CVPR 2026.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/lumictrl/";
+            },},{id: "projects-colorpeel",
+          title: 'ColorPeel',
+          description: "Color prompt learning with diffusion models via color and shape disentanglement.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/colorpeel/";
+            },},{
+        id: 'social-email',
+        title: 'email',
+        section: 'Socials',
+        handler: () => {
+          window.open("mailto:%6D%61%62%75%74%74@%63%76%63.%75%61%62.%65%73", "_blank");
+        },
+      },{
+        id: 'social-scholar',
+        title: 'Google Scholar',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://scholar.google.com/citations?user=vf7PeaoAAAAJ", "_blank");
+        },
+      },{
+        id: 'social-github',
+        title: 'GitHub',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://github.com/moatifbutt", "_blank");
+        },
+      },{
+        id: 'social-linkedin',
+        title: 'LinkedIn',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://www.linkedin.com/in/moatifbutt", "_blank");
+        },
+      },{
+        id: 'social-cv',
+        title: 'CV',
+        section: 'Socials',
+        handler: () => {
+          window.open("/assets/pdf/CV.pdf", "_blank");
+        },
+      },{
+      id: 'light-theme',
+      title: 'Change theme to light',
+      description: 'Change the theme of the site to Light',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("light");
+      },
+    },
+    {
+      id: 'dark-theme',
+      title: 'Change theme to dark',
+      description: 'Change the theme of the site to Dark',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("dark");
+      },
+    },
+    {
+      id: 'system-theme',
+      title: 'Use system default theme',
+      description: 'Change the theme of the site to System Default',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("system");
+      },
+    },];
+
+</script> <script src="/assets/al_search/js/shortcut-key.js"></script> </body> </html>

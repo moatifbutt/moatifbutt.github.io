@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://moatifbutt.github.io/sitemap.xml
